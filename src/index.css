@@ -4,8 +4,48 @@
 
 /* Minimal styling for body and fonts */
 body {
-  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Poppins", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+:root {
+  --shine-degree: 120deg;
+  --shine-color: hsla(0, 0%, 100%, 0.5);
+  --shine-effect: linear-gradient(var(--shine-degree),transparent,var(--shine-color),transparent);
+  --shine-transition: all 5s ease-in-out;
+}
+
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--shine-effect);
+}
+
+.shine-anim:before {
+  animation: shine 5s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+    transition-property: left;
+  }
+  11.5044247788%,
+  to {
+    left: 100%;
+    transition-property: left;
+  }
+}
+
+
