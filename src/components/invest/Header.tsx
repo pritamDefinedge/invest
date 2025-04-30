@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/definedge_logo_light.svg";
+import Logo from "../../assets/definedge_logo_light.svg";
 
 const Header: React.FC = () => {
   return (

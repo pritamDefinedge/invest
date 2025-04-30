@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../assets/definedge_logo_mobile.svg";
+import Logo from "../../assets/definedge_logo_mobile.svg";
 
 const OpenFree: React.FC = () => {
   const [mobile, setMobile] = useState("");
@@ -36,13 +36,13 @@ const OpenFree: React.FC = () => {
             <div className="text-center md:text-left">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-white">
                 Get{" "}
-                <span className="text-yellow-400 font-medium animate-pulse">
+                <span className="text-yellow-400 font-bold animate-pulse">
                   20% Off!
                 </span>
               </h2>
               <p className="text-blue-100 mb-4 md:mb-6 text-sm sm:text-base md:text-lg">
                 For Definedge Super Demat Account Holders 20% Off (Apply Code :
-                MYDSEC20)
+                <span className="text-yellow-300"> MYDSEC20 </span>)
               </p>
             </div>
           </div>

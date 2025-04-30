@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MomentumImg from "../assets/master_momentum.svg";
+import MomentumImg from "../../assets/master_momentum.svg";
 
 const MasterMomentum: React.FC = () => {
   const [showSharePopup, setShowSharePopup] = useState(false);
@@ -248,25 +248,29 @@ const MasterMomentum: React.FC = () => {
                     {/* <p>🎯 For Beginner Traders</p> */}
                     <p>🌐 Online </p>
                     <p>🗣️ English & Hindi</p>
+                
                   </div>
                 </div>
 
                 <hr className="border-gray-700" />
-
+              
                 {/* Pricing Section */}
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 md:gap-0">
                   {/* Pricing Block */}
+                  
                   <div>
                     <div>
                       <p className="text-gray-400 line-through text-sm sm:text-base">
                         ₹15,999/-
                       </p>
-                      <p className="text-xl font-bold text-white">
-                        ₹12,999/- + GST 18%
+                      <p className="text-lg font-bold text-white">
+                        ₹12,999/- + <span className="text-xs font-light"> GST 18%</span>
                       </p>
                     </div>
                   </div>
                 </div>
+
+                <span className="text-xs text-gray-50">For Definedge Super Demat Account Holders 20% Off <br /><span className="text-yellow-400"> Apply Code : MYDSEC20 </span></span>
 
                 {/* CTA Button */}
                 <button className="shine shine-anim w-full bg-[#5928E5] hover:bg-[#4a1fd1] text-white font-bold py-3 px-6 rounded-xl shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">

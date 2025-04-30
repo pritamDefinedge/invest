@@ -1,11 +1,11 @@
 import React from "react";
 
-import icon1 from "../assets/youare1.svg";
-import icon2 from "../assets/youare2.svg";
-import icon3 from "../assets/youare3.svg";
-import icon4 from "../assets/youare4.svg";
-import icon5 from "../assets/youare5.svg";
-import icon6 from "../assets/youare6.svg";
+import icon1 from "../../assets/youare1.svg";
+import icon2 from "../../assets/youare2.svg";
+import icon3 from "../../assets/youare3.svg";
+import icon4 from "../../assets/youare4.svg";
+import icon5 from "../../assets/youare5.svg";
+import icon6 from "../../assets/youare6.svg";
 const AreYou: React.FC = () => {
   const learningPoints = [
     {

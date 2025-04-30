@@ -1,12 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Events from "./page/Events";
+// Import other pages here
+import InvestMomentum from "./page/InvestMomentum"; // example page
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Events />
-    </div>
+    <Router>
+      <div className="min-h-screen">
+        <Routes>
+          <Route path="/" element={<Events />} />
+          {/* <Route path="/invest" element={<InvestMomentum />} /> */}
+          {/* Add more routes as needed */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

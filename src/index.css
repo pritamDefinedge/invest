@@ -61,3 +61,29 @@ body {
 .swiper-pagination-bullet:hover {
   background-color: rgba(49, 45, 102, 1); /* Hover effect */
 }
+
+
+
+/* side bar scroll  */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #002d67;
+  width: 6px;
+  height: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #002d67;
+  width: 6px;
+  height: 2px;
+}
+::-webkit-scrollbar-mouse:hover {
+  background: #002d67;
+  width: 6px;
+  height: 2px;
+}

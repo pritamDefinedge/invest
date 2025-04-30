@@ -1,6 +1,6 @@
 import React from "react";
-import prashantImg from "../assets/prashant.svg";
-import rajuImg from "../assets/raju.svg";
+import prashantImg from "../../assets/prashant.svg";
+import rajuImg from "../../assets/raju.svg";
 
 const Mentors: React.FC = () => {
   return (

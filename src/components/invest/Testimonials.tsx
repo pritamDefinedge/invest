@@ -9,46 +9,82 @@ const TestimonialSlider = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
+      name: "@prashantsarnaik9537",
       role: "Parent",
       quote:
-        "It was a very good experience  nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.",
+        "Hearty congratulations Sir, Definedge changed the life of many traders rather they are a factory of traders and investors. I don't know any other institution in India who is full of knowledge, technology, and excellent team traders.",
       rating: 5,
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      // image: "https://randomuser.me/api/portraits/women/44.jpg",
     },
     {
       id: 2,
-      name: "Michael Chen",
+      name: "@ypanwar22",
       role: "Educator",
       quote:
-        "It was a very good experience  nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.",
+        "Thanks for such a powerfull tool. You made a very complex scans on a single click. Great work Definedge team.",
       rating: 5,
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      // image: "https://randomuser.me/api/portraits/men/32.jpg",
     },
     {
       id: 3,
-      name: "Priya Patel",
+      name: "@khushrajsingh",
       role: "Student",
       quote:
-        "It was a very good experience  nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.",
+        "Great. No broker is interested in teaching skills but Definedge is doing this with very high quality content. Thanks sir for doing this for common investers.",
       rating: 4,
-      image: "https://randomuser.me/api/portraits/women/68.jpg",
+      // image: "https://randomuser.me/api/portraits/women/68.jpg",
     },
     {
       id: 4,
-      name: "David Wilson",
+      name: "@rushabhvora3549",
       role: "Financial Advisor",
       quote:
-        "It was a very good experience  nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.",
+        "It's really fantastic. A boon for retail no vice, otherwise unequipped retail investors. Love you Prashant Sir and entire definedge team",
       rating: 5,
       image: "https://randomuser.me/api/portraits/men/75.jpg",
     },
     {
       id: 5,
-      name: "Emma Rodriguez",
+      name: "@ravishinde26183",
       role: "Parent",
       quote:
-        "It was a very good experience  nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.",
+        "This is a very powerful strategy. I love the way Prashant Sir breaks down the most complex concepts into simple ones. And simple things often make a lot of money in the markets. The strategy includes all the necessary risk management parameters. He has also explained the J-curve returns for this strategy, which involve an initial period of losses, but eventually, the power of compounding takes over and beats market returns.",
+      rating: 5,
+      image: "https://randomuser.me/api/portraits/women/63.jpg",
+    },
+    {
+      id: 6,
+      name: "@srvithal38",
+      role: "Parent",
+      quote:
+        "* A Game-Changer in Momentum Investing! * Momentify by Definedge Securities has truly revolutionized the way I approach momentum investing. The platform's seamless integration of strategy selection, automated rebalancing, and one click execution simplifies the investment process remarkably. Whether you're a conservative investor or have an aggressive risk appetite, Momentify offers tailored strategies to suit your needs. (Momentum - Trade and Invest Effectively) What sets Momentify apart is its user-friendly interface combined with powerful analytical tools. The ability to backtest strategies and the inclusion of modules like the Momentum Trading Scanner provide invaluable insights for making informed decisions. (Zone Web Offers New Features| Definedge Securities) Kudos to Definedge Securities for creating such an innovative platform that empowers investors to harness the power of momentum investing with ease and confidence.",
+      rating: 5,
+      image: "https://randomuser.me/api/portraits/women/63.jpg",
+    },
+    {
+      id: 7,
+      name: "@VishalKumar-w6t9c",
+      role: "Parent",
+      quote:
+        "I'm so happy these days due to the belief that is building within me after following Definedge's initiatives, be it RZONE, RADAR, latest book (Master Momentum Investing and Trading Strategies) that I purchased and webinar & videos that I religiously follow… And, now after getting to know about MOMENTIFY, I am excited and overwhelmed at the same time. I believe Prashant sir and the whole Definedge team is the SAVIOR for the entire RETAIL MARKET PARTICIPANTS and for which I personally feel highly indebted... Thank you so much sir for being our guiding light. ",
+      rating: 5,
+      image: "https://randomuser.me/api/portraits/women/63.jpg",
+    },
+    {
+      id: 8,
+      name: "@HelloBrother-r8v",
+      role: "Parent",
+      quote:
+        "Congratulations Prashant Sir and Definedge Team for such a wonderful product.",
+      rating: 5,
+      image: "https://randomuser.me/api/portraits/women/63.jpg",
+    },
+    {
+      id: 9,
+      name: "@siddharthshah8824",
+      role: "Parent",
+      quote:
+        "As always, amazing, mind-blowing and absolutely innovative as well. I wish I could like all your videos more than once, Prashant sir. Thanks a ton once again to you and the entire Definedge Family.",
       rating: 5,
       image: "https://randomuser.me/api/portraits/women/63.jpg",
     },
@@ -123,7 +159,7 @@ const TestimonialSlider = () => {
                     >
                       <div className="relative z-10 h-full flex flex-col">
                         <div className="flex items-center mb-4">
-                          <div
+                          {/* <div
                             className={`relative transition-all duration-500 ${
                               isActive
                                 ? "ring-3 md:ring-4 w-14 h-14 md:w-20 md:h-20"
@@ -135,7 +171,7 @@ const TestimonialSlider = () => {
                               alt={testimonial.name}
                               className="w-full h-full rounded-full object-cover"
                             />
-                          </div>
+                          </div> */}
                           <div className="ml-3 md:ml-4">
                             <h4
                               className={`font-bold transition-all duration-500 ${
@@ -147,7 +183,7 @@ const TestimonialSlider = () => {
                               {testimonial.name}
                             </h4>
                             <div className="flex items-center flex-wrap">
-                              <span
+                              {/* <span
                                 className={`transition-all duration-500  ${
                                   isActive
                                     ? "text-purple-300 text-xs md:text-sm"
@@ -155,7 +191,7 @@ const TestimonialSlider = () => {
                                 }`}
                               >
                                 {testimonial.role}
-                              </span>
+                              </span> */}
                               <div className="ml-2 md:ml-3">
                                 {[...Array(5)].map((_, i) => (
                                   <svg

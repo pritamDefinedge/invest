@@ -1,18 +1,18 @@
 import React, { useEffect, useState, useRef } from "react";
-import Header from "../components/master/Header";
-import Footer from "../components/master/Footer";
-import FooterBanner from "../components/master/FooterBanner";
-import Hero from "../components/master/Hero";
-import AreYou from "../components/master/AreYou";
-import Introducing from "../components/master/Introducing";
-import WhatYouLearn from "../components/master/WhatYouLearn";
-import Mentors from "../components/master/Mentors";
-import MasterMomentum from "../components/master/MasterMomentum";
-import OpenFree from "../components/master/OpenFree";
-import Testimonials from "../components/master/Testimonials";
-import Faq from "../components/master/Faq";
+import Header from "../components/invest/Header";
+import Footer from "../components/invest/Footer";
+import FooterBanner from "../components/invest/FooterBanner";
+import Hero from "../components/invest/Hero";
+import AreYou from "../components/invest/AreYou";
+import Introducing from "../components/invest/Introducing";
+import WhatYouLearn from "../components/invest/WhatYouLearn";
+import Mentors from "../components/invest/Mentors";
+import MasterMomentum from "../components/invest/MasterMomentum";
+import OpenFree from "../components/invest/OpenFree";
+import Testimonials from "../components/invest/Testimonials";
+import Faq from "../components/invest/Faq";
 
-import EndEvent from "../components/master/EndEvent";
+import EndEvent from "../components/invest/EndEvent";
 
 import { ArrowUpIcon } from "@heroicons/react/24/solid";
 import Lenis from "@studio-freight/lenis";
