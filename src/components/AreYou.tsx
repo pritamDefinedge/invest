@@ -1,31 +1,31 @@
 import React from "react";
 import Icon from "../assets/areyou.svg";
-
+import marketImg from "../assets/market-research.svg"
 const AreYou: React.FC = () => {
   const learningPoints = [
     {
-      emoji: Icon,
-      description: "Unsure how to identify strong stocks or the right entry points? - P1",
+      emoji: marketImg,
+      description: "Unsure how to identify strong stocks or the right entry points?",
     },
     {
       emoji: Icon,
-      description: "Feel overwhelmed by market noise, tips and conflicting signals? - P2",
+      description: "Feel overwhelmed by market noise, tips and conflicting signals?",
     },
     {
       emoji: Icon,
-      description: "Keep jumping between strategies without clarity or conviction? - P3",
+      description: "Keep jumping between strategies without clarity or conviction? ",
     },
     {
       emoji: Icon,
-      description: "Struggle with inconsistent results or emotional trading? - P4",
+      description: "Struggle with inconsistent results or emotional trading? ",
     },
     {
       emoji: Icon,
-      description: "Eager to catch strong moves early and exit at the right time? - P5",
+      description: "Eager to catch strong moves early and exit at the right time?",
     },
     {
       emoji: Icon,
-      description: "Want to master a structured momentum trading approach that works across timeframes? - P6",
+      description: "Want to master a structured momentum trading approach that works across timeframes? ",
     },
   ];
 
@@ -82,7 +82,7 @@ const AreYou: React.FC = () => {
         {/* CTA section */}
         <div className="mt-16 text-center px-2">
           <div className="max-w-3xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg opacity-90 mb-8">
-            <p>If you answered "Yes" to any of the above, Master Momentum Trading is for you</p>
+            <p>If you answered <span> "Yes"</span>  to any of the above, Master Momentum Trading is for you</p>
           </div>
         </div>
       </div>

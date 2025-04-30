@@ -44,7 +44,7 @@ const HeroSection: React.FC = () => {
 
           {/* CTA Button */}
           <div className="flex justify-center">
-            <button className="relative overflow-hidden group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-3 px-6 sm:px-8 rounded-md transition-all duration-300 hover:shadow-md hover:shadow-purple-500/30">
+            <a href="https://dashboard.definedge.com/buy-product/training" target="_blank" className="relative overflow-hidden group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-3 px-6 sm:px-8 rounded-md transition-all duration-300 hover:shadow-md hover:shadow-purple-500/30">
               <span className="relative z-10 flex items-center justify-center">
                 Register Now
                 <svg
@@ -63,7 +63,7 @@ const HeroSection: React.FC = () => {
                 </svg>
               </span>
               <span className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md" />
-            </button>
+            </a>
           </div>
         </div>
       </div>

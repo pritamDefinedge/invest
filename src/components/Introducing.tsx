@@ -74,7 +74,7 @@ const Introducing: React.FC = () => {
                 {point.description.map((item, idx) => (
                   <li
                     key={idx}
-                    className="text-sm sm:text-base md:text-[17px] text-gray-300 leading-relaxed"
+                    className="flex items-start text-gray-300 text-sm sm:text-base leading-relaxed before:content-[''] before:block before:w-1.5 before:h-1.5 before:rounded-full before:bg-purple-400 before:mt-2 before:mr-3 before:flex-shrink-0"
                   >
                     {item}
                   </li>

@@ -29,7 +29,7 @@ const Mentors: React.FC = () => {
           {/* Content */}
           <div className="w-full md:w-9/12 space-y-6">
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
-              Prashant
+            Prashant Shah
             </h3>
             <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed">
               Mr. Prashant Shah is the Co-founder and CEO of Definedge and the

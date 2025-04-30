@@ -11,7 +11,9 @@ const MasterMomentum: React.FC = () => {
             Master Momentum Trading
           </h2>
           <div className="flex items-center space-x-4">
-            <span className="text-gray-300 text-sm sm:text-base md:text-lg">41 are interested</span>
+            <span className="text-gray-300 text-sm sm:text-base md:text-lg">
+              41 are interested
+            </span>
             <button className="flex items-center space-x-2 border border-[#DD354C] text-[#DD354C] px-4 py-2 rounded-lg hover:bg-[#DD354C] hover:text-white transition duration-300">
               <span>I'm Interested</span>
             </button>
@@ -47,7 +49,7 @@ const MasterMomentum: React.FC = () => {
             </div>
 
             {/* Content Section (30%) with black background */}
-            <div className="lg:w-5/12 bg-black relative border-l border-white/10 p-6 md:p-8 overflow-hidden">
+            <div className="lg:w-5/12 relative border-l border-white/10 p-6 md:p-8 overflow-hidden bg-gradient-to-b from-[#00000000] via-[#5928E54D] via-30%">
               {/* Gradient overlay for depth */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] via-[#0e0e0e] to-[#000000] opacity-80 pointer-events-none z-0" />
 
@@ -63,7 +65,7 @@ const MasterMomentum: React.FC = () => {
                     <p>🕙 10:00 AM – 5:00 PM</p>
                     <p>⏱️ 11 Hours</p>
                     <p>🎯 For Beginner Traders</p>
-                    <p>🌐 Online & Offline</p>
+                    <p>🌐 Online </p>
                     <p>🗣️ English & Hindi</p>
                   </div>
                 </div>
@@ -71,28 +73,48 @@ const MasterMomentum: React.FC = () => {
                 <hr className="border-gray-700" />
 
                 {/* Pricing Section */}
-                <div className="flex justify-between items-start md:items-center flex-col md:flex-row leading-snug">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 md:gap-0">
+                  {/* Pricing Block */}
                   <div>
-                    <div className="flex items-baseline space-x-2">
-                      <span className="text-gray-400 line-through text-sm sm:text-base md:text-base">
+                    <div>
+                      <p className="text-gray-400 line-through text-sm sm:text-base">
                         ₹15,999/-
-                      </span>
-                      <span className="text-2xl sm:text-3xl md:text-3xl font-bold text-white">
-                        ₹12,999/-
-                      </span>
+                      </p>
+                      <p className="text-xl font-bold text-white">
+                        ₹12,999/- + GST 18%
+                      </p>
                     </div>
-                    <p className="text-sm text-green-500 mt-1">
+
+                    {/* <p className="text-sm text-green-500 mt-1">
                       Save ₹3,000 (18% off)
-                    </p>
+                    </p> */}
                   </div>
-                  <span className="bg-green-600 text-white text-xs sm:text-sm md:text-xs px-3 py-1 rounded-full mt-4 md:mt-0">
+
+                  {/* Availability Badge */}
+                  {/* <span className="text-green-500 bg-[#22c55e29] text-xs sm:text-sm px-3 py-1 rounded-full">
                     Available
-                  </span>
+                  </span> */}
                 </div>
 
                 {/* CTA Button */}
                 <button className="shine shine-anim w-full bg-[#5928E5] hover:bg-[#4a1fd1] text-white font-bold py-3 px-6 rounded-xl shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">
-                  🚀 Register Now
+                  <span className="relative z-10 flex items-center justify-center">
+                    Register Now
+                    <svg
+                      className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
+                    </svg>
+                  </span>
                 </button>
               </div>
             </div>

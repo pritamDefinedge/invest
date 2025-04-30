@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../assets/definedge_logo_mobile.svg";
 
 const OpenFree: React.FC = () => {
+  const [mobile, setMobile] = useState("");
+
+  const isValidIndianMobile = (number: string): boolean => {
+    return /^[6-9]\d{9}$/.test(number);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (isValidIndianMobile(mobile)) {
+      window.location.href = `https://signup.definedgesecurities.com/?dnum=${mobile}&ss=dsec-home`;
+    } else {
+      alert("Please enter a valid 10-digit Indian mobile number (starting with 6-9).");
+    }
+  };
+
   return (
     <section className="py-12 md:py-12 bg-[#18152e]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="shine shine-anim bg-gradient-to-r from-[#091E40] to-[#0A2B5A] rounded-2xl p-6 md:p-8 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 shadow-xl">
-          {/* Left side - Logo and content */}
+          {/* Left side */}
           <div className="flex flex-col md:flex-row items-center gap-6 w-full lg:w-1/2">
             <div className="flex-shrink-0">
               <img
@@ -24,8 +40,7 @@ const OpenFree: React.FC = () => {
               </h2>
               <p className="text-blue-100 mb-4 md:mb-6 text-sm sm:text-base md:text-lg">
                 Special Offer: 20% Off 'Master the Momentum'
-                <br className="hidden md:block" /> for Definedge Demat Users
-                Only.
+                <br className="hidden md:block" /> for Definedge Demat Users Only.
               </p>
             </div>
           </div>
@@ -35,11 +50,10 @@ const OpenFree: React.FC = () => {
             <div className="rounded-xl p-4 md:p-2">
               <p className="text-lg sm:text-xl md:text-2xl font-medium mb-6 text-white">
                 Open your{" "}
-                <span className="text-yellow-400 font-light">Free</span> Super
-                Demat account
+                <span className="text-yellow-400 font-light">Free</span> Super Demat account
               </p>
 
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <div className="flex flex-1">
                     <div className="flex items-center px-4 bg-white/10 border border-white/20 rounded-l-lg">
@@ -49,9 +63,13 @@ const OpenFree: React.FC = () => {
                       type="tel"
                       placeholder="Enter Mobile Number"
                       className="flex-grow p-3 bg-white/10 text-white placeholder-blue-200 border border-white/20 rounded-r-lg focus:outline-none focus:border-transparent transition duration-200"
-                      pattern="[0-9]{10}"
                       maxLength={10}
                       required
+                      inputMode="numeric"
+                      value={mobile}
+                      onChange={(e) =>
+                        setMobile(e.target.value.replace(/[^0-9]/g, ""))
+                      }
                     />
                   </div>
 

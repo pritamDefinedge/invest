@@ -1,35 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const faqs = [
   {
-    question: "Q1. What are mutual funds?",
+    question: "Q1. Who is this program for?",
     answer:
-      "Mutual funds schemes are investment avenues where money pooled from various investors is invested in a diverse portfolio of stocks, bonds, and other securities. Mutual funds are managed by professional fund managers who make decisions concerned with investment of the investors’ money.",
+      "Anyone serious about trading momentum objectively and consistently. Basic market understanding is recommended. ",
   },
   {
-    question: "Q2. What is SIP in mutual funds?",
+    question: "Q2. What’s the level of this training?",
     answer:
-      "Systematic Investment Plans (or SIPs) are a kind of mutual fund investment where investors can invest a fixed amount regularly at fixed intervals (like monthly or quarterly). As per SEBI mandate, investors can start investing in SIP with a minimum amount of ₹500.",
+      "Beginner-friendly, but insightful for experienced traders as well.",
   },
   {
-    question: "Q3. Are mutual funds safe?",
-    answer:
-      "Mutual funds are considered a safe investment since they allow investors to diversify their portfolio. However, it is important to remember that mutual funds are subject to market risks and their returns can vary based on the underlying security’s performance.",
+    question: "Q3. Is this a live or recorded session?",
+    answer: " It’s a live, online training conducted over GoToWebinar. ",
   },
   {
-    question: "Q4. Are Mutual Funds tax-free?",
+    question: "Q4. Will I get access to recordings? ",
     answer:
-      "Mutual Funds are not entirely tax-free. However, there are tax saver mutual fund schemes like ELSS that offer you a tax rebate of up to ₹1.5 lakh with a lock-in period of 3 years. The taxation on mutual funds depends on a number of factors like the type of mutual fund, investment duration, and the investor’s tax bracket.",
+      "Yes, session recordings will be provided within 7 days of the training, unless delayed due to any technical issues.",
   },
   {
-    question: "Q5. What is NAV?",
-    answer:
-      "NAV or Net Asset Value of a mutual fund scheme is its per-unit market value. It is the price at which an investor can buy mutual fund units. NAV is calculated by dividing the total assets of the fund after deducting the liabilities by the total number of outstanding units.",
+    question: "Q5. Will there be live interaction with mentors?",
+    answer: "Yes, the session includes interactive Q&A with mentors. ",
   },
   {
-    question: "Q6. What is the difference between SIP and lumpsum investment?",
+    question: "Q6. Can I join without a Definedge Demat Account",
     answer:
-      "SIPs involve regular investment contributions at fixed intervals while lumpsum investment is a one-time investment of a significant amount into the mutual funds.",
+      "Yes, but you won’t be eligible for the 20% discount or exclusive benefits.",
+  },
+  {
+    question: "Q7. What if I am not based in India? ",
+    answer: "You can attend from anywhere with a stable internet connection. ",
+  },
+  {
+    question: "Q8. Will I get post-training support? ",
+    answer:
+      "Yes, guidance will be provided on how to practice further and use the Definedge Ecosystem effectively. ",
+  },
+  {
+    question:
+      "Q9. Will these strategies work across timeframes or instruments? ",
+    answer:
+      "Absolutely. The techniques are timeframe-neutral and work across stocks, indices and commodities. ",
   },
 ];
 
@@ -43,30 +56,24 @@ const FAQSection: React.FC = () => {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#18152e] text-white">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          FAQ
-        </h2>
-     
+        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">FAQ</h2>
       </div>
 
       <div className="mt-12 max-w-7xl mx-auto space-y-6">
         {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className="border border-gray-700 rounded-xl"
-          >
+          <div key={index} className="border border-gray-700 rounded-xl">
             <button
               onClick={() => toggle(index)}
               className="w-full flex items-center justify-between px-6 py-4 text-left focus:outline-none focus-visible:ring focus-visible:ring-blue-500 rounded-xl"
               aria-expanded={openIndex === index}
               aria-controls={`faq-${index}`}
             >
-              <span className="text-lg font-medium">
-                {faq.question}
-              </span>
+              <span className="text-lg font-medium">{faq.question}</span>
               <svg
                 className={`h-5 w-5 transition-transform duration-300 ${
-                  openIndex === index ? 'rotate-180 text-blue-500' : 'text-gray-400'
+                  openIndex === index
+                    ? "rotate-180 text-blue-500"
+                    : "text-gray-400"
                 }`}
                 fill="none"
                 viewBox="0 0 24 24"
