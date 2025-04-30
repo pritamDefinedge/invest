@@ -54,7 +54,9 @@ const OpenFree: React.FC = () => {
         setEmail("");
         setMobile("");
       } else {
-        alert("There was a problem submitting the form. Please try again later.");
+        const responseData = await response.json();
+        // console.error("Error response:", responseData);
+        alert(`${responseData.message}` || "Failed to register. Please try again.");
       }
     } catch (error) {
       console.error("Form submission error:", error);
