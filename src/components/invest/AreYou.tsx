@@ -1,99 +1,121 @@
 import React from "react";
 
-import icon1 from "../../assets/youare1.svg";
-import icon2 from "../../assets/youare2.svg";
-import icon3 from "../../assets/youare3.svg";
-import icon4 from "../../assets/youare4.svg";
-import icon5 from "../../assets/youare5.svg";
-import icon6 from "../../assets/youare6.svg";
 const AreYou: React.FC = () => {
-  const learningPoints = [
-    {
-      emoji: icon1,
-      description: "Unsure how to identify strong stocks or the right entry points?",
-    },
-    {
-      emoji: icon2,
-      description: "Feel overwhelmed by market noise, tips and conflicting signals?",
-    },
-    {
-      emoji: icon3,
-      description: "Keep jumping between strategies without clarity or conviction? ",
-    },
-    {
-      emoji: icon4,
-      description: "Struggle with inconsistent results or emotional trading? ",
-    },
-    {
-      emoji: icon5,
-      description: "Eager to catch strong moves early and exit at the right time?",
-    },
-    {
-      emoji: icon6,
-      description: "Want to master a structured momentum trading approach that works across timeframes? ",
-    },
+  const leftPoints = [
+    "Invest in stocks that beat the market",
+    "Ensure your portfolio recovers every time",
+    "Ride momentum trends with no effort",
+  ];
+
+  const rightPoints = [
+    "Invest objectively, unfazed by emotions",
+    "Catch trends and exit at the right time",
   ];
 
   return (
-    <section className="relative  px-4 sm:px-6 lg:px-8 bg-[#18152e] text-white overflow-hidden">
-      {/* Top blur effect */}
-      <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-[#0f0c29] via-[#18152e]/90 to-transparent backdrop-blur-lg z-10 pointer-events-none"></div>
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0f0c29] to-[#18152e] text-white overflow-hidden">
+      {/* Floating gradient orbs */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[120px] animate-[float_15s_ease-in-out_infinite]" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] animate-[float_18s_ease-in-out_infinite]" />
+      </div>
 
-      {/* Animated background elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-purple-600 rounded-full filter blur-[100px] opacity-10 animate-[float_12s_ease-in-out_infinite]" />
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-600 rounded-full filter blur-[90px] opacity-10 animate-[float_15s_ease-in-out_infinite]" />
-      
-      <div className="max-w-6xl mx-auto relative z-20">
-        {/* Header section */}
-        <div className="text-center mb-16 px-2">
-          <span className="inline-block text-xs sm:text-sm font-medium tracking-widest text-[#FFD9D9] mb-4 px-4 py-2 rounded-full bg-[#2d2755]/50 border border-[#3a3465]">
-            Is This You?
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-            Are You Facing These Challenges?
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Markets <span className="text-red-400">Fall</span> &{" "}
+            <span className="text-green-400">Recover</span>
+            <br />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
+              Your Investment May Not!
+            </span>
           </h2>
-          <p className="max-w-2xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg opacity-90">
-            Common struggles that traders face  and exactly how we help solve them
+          <p className="max-w-2xl mx-auto text-gray-300 text-lg md:text-xl opacity-90 leading-relaxed">
+            The market has weathered many storms over the years and even as the
+            market recovers from each crash, most portfolios don't.
           </p>
         </div>
 
-        {/* Points grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {learningPoints.map((point, index) => (
-            <div 
-              key={index}
-              className="group relative bg-[#1e1a3a]/80 backdrop-blur-sm border border-[#2d2755] rounded-xl p-5 sm:p-6 transition-all duration-500 hover:bg-[#262145] hover:border-[#4a3f8a] hover:shadow-lg hover:shadow-purple-500/10 overflow-hidden"
-            >
-              {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-              
-              <div className="flex items-start gap-4 sm:gap-5 relative z-10">
-                <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-[#2d2755] flex items-center justify-center text-xl sm:text-2xl group-hover:scale-110 transition-transform">
-                  <img src={point.emoji} alt="" className="w-5 h-5 sm:w-6 sm:h-6" />
-                </div>
-                <div>
-                  <p className="text-gray-200 text-sm sm:text-base leading-relaxed">
-                    {point.description}
-                  </p>
-                </div>
-              </div>
-
-              {/* Decorative corner */}
-              <div className="absolute top-0 right-0 w-10 h-10 sm:w-12 sm:h-12 border-t border-r border-[#4a3f8a] rounded-tr-xl transition-all duration-300 group-hover:w-14 group-hover:h-14" />
+        {/* Unified Box: Points + Conclusion */}
+        <div className="bg-[#1e1a3a]/50 backdrop-blur-sm p-8 rounded-2xl border border-[#2d2755] hover:border-[#4a3f8a] transition-all duration-300 mb-16">
+          {/* Points Columns */}
+          <div className="flex flex-col lg:flex-row gap-12 mb-12">
+            {/* Left Column */}
+            <div className="lg:w-1/2">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center lg:text-left bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-blue-300">
+                But what if you could -
+              </h3>
+              <ul className="space-y-6">
+                {leftPoints.map((point, index) => (
+                  <li key={index} className="flex items-start group">
+                    <div className="flex-shrink-0 mt-1 mr-4 text-green-400 group-hover:text-purple-300 transition-colors duration-300">
+                      <svg
+                        className="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-gray-200 text-lg md:text-xl group-hover:text-white transition-colors duration-300">
+                      {point}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          ))}
-        </div>
 
-        {/* CTA section */}
-        <div className="mt-16 text-center px-2">
-          <div className="max-w-3xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg opacity-90 mb-8">
-            <p>If you answered <span> "Yes"</span>  to any of the above, Master Momentum Trading is for you</p>
+            {/* Right Column */}
+            <div className="lg:w-1/2 mt-8 ">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center lg:text-left bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-blue-300">
+                {""}
+              </h3>
+              <ul className="space-y-6">
+                {rightPoints.map((point, index) => (
+                  <li key={index} className="flex items-start group">
+                    <div className="flex-shrink-0 mt-1 mr-4 text-green-400 group-hover:text-blue-300 transition-colors duration-300">
+                      <svg
+                        className="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-gray-200 text-lg md:text-xl group-hover:text-white transition-colors duration-300">
+                      {point}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Conclusion Section */}
+          <div className="text-left">
+            <p className="text-xl  text-gray-300  mx-auto leading-relaxed">
+              You can and all it takes is two things –{" "}
+              <span className="font-semibold text-white">
+                the right education
+              </span>{" "}
+              and{" "}
+              <span className="font-semibold text-white">the right tool</span>
+            </p>
           </div>
         </div>
       </div>
 
-      {/* Bottom blur effect */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#18152e] via-[#18152e]/90 to-transparent backdrop-blur-sm z-10"></div>
+      {/* Bottom gradient */}
+      <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-[#0f0c29] via-[#0f0c29]/90 to-transparent backdrop-blur-sm z-0" />
     </section>
   );
 };

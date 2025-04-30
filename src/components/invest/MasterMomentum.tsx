@@ -32,7 +32,7 @@ const MasterMomentum: React.FC = () => {
           pageUrl
         )}`;
         break;
-   
+
       default:
         break;
     }
@@ -166,7 +166,6 @@ const MasterMomentum: React.FC = () => {
                 </div>
                 <span className="text-xs text-white mt-1">LinkedIn</span>
               </button>
-             
             </div>
 
             <div className="flex">
@@ -188,14 +187,22 @@ const MasterMomentum: React.FC = () => {
       )}
 
       <div className="max-w-7xl mx-auto px-4">
-        {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center mb-4 md:mb-4">
+        {/* Header Section with Title and Description */}
+        <div className="flex flex-col justify-center items-center text-center mb-8">
           <h2 className="text-2xl sm:text-3xl md:text-3xl font-semibold text-white mb-4 md:mb-0">
-            Master Momentum Trading
+            Join Exclusive Webinar Start with FREE Learning
           </h2>
+          <p className="text-gray-300 max-w-2xl mx-auto">
+            Before you explore and invest with Momentify, start with an
+            exclusive webinar. Understand the what and how of momentum, how your
+            portfolio can grow with momentum investing, and how you can invest
+            with Momentify.
+          </p>
+        </div>
+
+        {/* Share Button */}
+        <div className="flex flex-col md:flex-row justify-end items-end mb-4">
           <div className="flex items-center space-x-4">
-          
-           
             <button
               onClick={() => setShowSharePopup(true)}
               className="p-2 text-gray-400 hover:text-white rounded-full transition duration-300"
@@ -230,9 +237,9 @@ const MasterMomentum: React.FC = () => {
               />
             </div>
 
-            {/* Content Section (30%) with black background */}
+            {/* Content Section (30%) */}
             <div className="lg:w-5/12 relative border-l border-white/10 p-6 md:p-8 overflow-hidden bg-gradient-to-b from-[#00000000] via-[#5928E54D] via-30%">
-              {/* Gradient overlay for depth */}
+              {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] via-[#0e0e0e] to-[#000000] opacity-80 pointer-events-none z-0" />
 
               {/* Main Content */}
@@ -243,34 +250,26 @@ const MasterMomentum: React.FC = () => {
                     Course Details
                   </h3>
                   <div className="space-y-1 text-sm sm:text-base md:text-base text-gray-300 leading-relaxed">
-                    <p>📅 Sat 10th May 2025 - Sun 11th May 2025</p>
-                    <p>🕙 10:00 AM – 5:00 PM</p>
-                    {/* <p>🎯 For Beginner Traders</p> */}
+                    <p>📅 Wed, 7th May 2025</p>
+                    <p>🕙 07:00 PM – 09:00 PM</p>
+                    {/* <p>🎯 For All Trader</p> */}
                     <p>🌐 Online </p>
                     <p>🗣️ English & Hindi</p>
-                
                   </div>
                 </div>
 
                 <hr className="border-gray-700" />
-              
+
                 {/* Pricing Section */}
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 md:gap-0">
-                  {/* Pricing Block */}
-                  
-                  <div>
-                    <div>
-                      <p className="text-gray-400 line-through text-sm sm:text-base">
-                        ₹15,999/-
-                      </p>
-                      <p className="text-lg font-bold text-white">
-                        ₹12,999/- + <span className="text-xs font-light"> GST 18%</span>
-                      </p>
-                    </div>
+                  <div className="flex flex-col items-center text-center md:text-left">
+                    {/* Price Label with Gradient Background */}
+              
+                    <span className="text-lg font-medium text-green-500 mt-2">
+                      Free
+                    </span>
                   </div>
                 </div>
-
-                <span className="text-xs text-gray-50">For Definedge Super Demat Account Holders 20% Off <br /><span className="text-yellow-400"> Apply Code : MYDSEC20 </span></span>
 
                 {/* CTA Button */}
                 <button className="shine shine-anim w-full bg-[#5928E5] hover:bg-[#4a1fd1] text-white font-bold py-3 px-6 rounded-xl shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">

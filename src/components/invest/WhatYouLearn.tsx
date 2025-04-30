@@ -3,40 +3,25 @@ import React from "react";
 const WhatYouLearn: React.FC = () => {
   const learningPoints = [
     {
-      emoji: "🔄",
-      description: "Your approach will move from random trades to a repeatable, structured process.",
+      description: "Access an ecosystem that makes you market-ready",
     },
     {
-      emoji: "💡",
-      description: "You will understand how professionals think, plan and manage momentum trades.",
+      description:
+        "Explore 15+ tools for transformative education, actionable analysis & seamless trading ",
     },
     {
-      emoji: "🎯",
-      description: "You will stop being reactive and start trading with clarity and control.",
+      description:
+        "Learn with 3 expert-guided courses worth ₹11,775, for you at no cost",
     },
     {
-      emoji: "⚙️",
-      description: "You will learn tested techniques that bring objectivity to your analysis.",
+      description:
+        "Navigate the Definedge ecosystem with your unique GrowthMap",
     },
     {
-      emoji: "📈",
-      description: "You will gain confidence in building and executing your own setups.",
+      description: "Analyze & trade like a PRO with 2 months’ free trial ",
     },
     {
-      emoji: "📉",
-      description: "You will reduce emotional and overtrading tendencies by following logical signals.",
-    },
-    {
-      emoji: "🧭",
-      description: "It teaches you when to act and when to stay out – a key element of professional trading.",
-    },
-    {
-      emoji: "📚",
-      description: "With insights from mentors who have practiced Noiseless Trading for years, you will avoid common pitfalls and master consistency.",
-    },
-    {
-      emoji: "🧠",
-      description: "Most importantly, you will become a Noiseless Trader – focused, composed and consistent.",
+      description: "Get all your PRO subscriptions, effectively Free! ",
     },
   ];
 
@@ -49,11 +34,12 @@ const WhatYouLearn: React.FC = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header section */}
         <div className="text-center mb-12 px-4">
-          <h2 className="text-sm sm:text-base md:text-lg font-semibold text-[#FFD9D9] mb-2 tracking-widest">
-            What You Will Learn
+          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-gray-100 leading-snug">
+            Your Key to Momentify & More  Your Super Demat 
           </h2>
-          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-100 leading-snug">
-            Your Evolution as a Power Trader
+          <h3 className="text-sm sm:text-base md:text-lg font-semibold text-[#FFD9D9] mb-2 tracking-widest">
+            From one-click momentum investing to expert-guided education,
+            everything begins with a Super Demat – the demat that you deserve 
           </h3>
         </div>
 
@@ -68,7 +54,6 @@ const WhatYouLearn: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
 
               <div className="flex items-start gap-4 relative z-10">
-                <span className="text-xl sm:text-xl md:text-xl">{point.emoji}</span>
                 <p className="text-gray-300 text-sm sm:text-sm md:text-base leading-relaxed">
                   {point.description}
                 </p>
@@ -79,6 +64,36 @@ const WhatYouLearn: React.FC = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="flex justify-center py-12">
+        <button
+          onClick={() =>
+            window.open(
+              "https://dashboard.definedge.com/buy-product/training",
+              "_blank"
+            )
+          }
+          className="relative overflow-hidden group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/30"
+        >
+          <span className="relative z-10 flex items-center justify-center gap-2">
+          Get Your Super Demat
+            <svg
+              className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </span>
+          <span className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
+        </button>
       </div>
     </section>
   );

@@ -1,90 +1,139 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Introducing: React.FC = () => {
   const learningPoints = [
     {
-      title: "Build Your Momentum Trading Engine",
-      description: [
-        "How to Build a Custom Momentum Trading Engine",
-        "Tools to Identify Momentum in Stocks, Indices and Sectors using Objective Criteria",
-        "Price + Relative Strength-Based Strategy Framework",
-        "Price, Performance & Participation [3P] Analysis",
-      ],
+      title: "Learn Momentum",
+      description:
+        "Start with an expert-guided module that explores momentum investing from scratch to advanced investment strategies",
     },
     {
-      title: "Execute High-Probability Trades with Confidence",
-      description: [
-        "Learn Entry & Exit Signals Based on Momentum Filters",
-        "Trade Management Rules for Trend Continuation",
-        "Momentum Confirmation Techniques",
-        "Risk-Controlled Execution Strategies",
-      ],
+      title: "Deploy Strategies",
+      description:
+        "Choose from expert-created strategies or make your own based on funda-techno insights to best suit your goals",
     },
     {
-      title: "Practice and Master the System",
-      description: [
-        "Live Case Studies on Stocks and Indices",
-        "Practice Assignments to Internalize Concepts",
-        "Trade Review & Performance Analysis",
-        "Build Consistency with Repeatable Framework",
-      ],
+      title: "Backtest Your Way",
+      description:
+        "Backtest your strategies over 2 decades to understand the performance and build confidence before you invest",
+    },
+    {
+      title: "Invest Objectively",
+      description:
+        "Invest in your strategy easily with Momentify and let the system auto-allocate your funds across stocks",
+    },
+    {
+      title: "Automated Rebalancing",
+      description:
+        "Momentify rebalances your portfolio monthly, so you can execute your investment in just one click",
     },
   ];
 
   return (
-    <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-[#18152e] text-white overflow-hidden">
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0f0c29] to-[#1a1633] text-white overflow-hidden">
       {/* Animated background elements */}
-      <div className="absolute top-0 left-1/4 w-72 h-72 bg-purple-600 rounded-full filter blur-[100px] opacity-10 animate-float1 pointer-events-none" />
-      <div className="absolute bottom-10 right-1/4 w-64 h-64 bg-blue-600 rounded-full filter blur-[90px] opacity-10 animate-float2 pointer-events-none" />
-      <div className="absolute top-1/3 right-10 w-48 h-48 bg-indigo-600 rounded-full filter blur-[80px] opacity-10 animate-float3 pointer-events-none" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[120px] animate-[float_15s_ease-in-out_infinite]" />
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] animate-[float_18s_ease-in-out_infinite]" />
+        <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-indigo-600/20 rounded-full blur-[100px] animate-[float_12s_ease-in-out_infinite]" />
+      </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header section */}
-        <div className="text-center mb-16 px-2">
-          <span className="inline-block text-xs sm:text-sm font-medium tracking-widest text-[#FFD9D9] uppercase mb-4 px-4 py-2 rounded-full bg-[#2d2755]/50 border border-[#3a3465]">
-            Introducing
-          </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Master{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
-              Momentum Trading
-            </span>
+        {/* Header */}
+        <div className="text-center mb-20 px-2">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Invest in{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400 animate-gradient">
+              Momentum
+            </span>{" "}
+            in One Click with
           </h2>
-          <p className="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 opacity-90 leading-relaxed">
-            Learn to construct a powerful{" "}
-            <span className="font-medium text-white">Momentum Trading Engine</span> and apply it in real markets with precision and discipline.
+          <p className="max-w-4xl mx-auto text-lg sm:text-xl text-gray-300 opacity-90 leading-relaxed">
+            From the creators of OPSTRA comes the momentum trading engine that
+            lets you analyze, backtest and invest in a few clicks. Faster than
+            you can say "Momentify makes Momentum Investing Super-simple".
           </p>
         </div>
 
-        {/* Features grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {learningPoints.map((point, index) => (
-            <div
-              key={index}
-              className="group relative bg-[#1e1a3a]/70 backdrop-blur-sm border border-[#2d2755] rounded-xl p-6 sm:p-8 transition-all duration-500 hover:border-[#4a3f8a] hover:shadow-lg hover:shadow-purple-500/10 overflow-hidden"
-            >
-              {/* Glow effect on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+        {/* Features Flexbox */}
+        <div className="space-y-10 mb-16">
+          {/* First Row: 3 Boxes */}
+          <div className="flex flex-wrap justify-center gap-8">
+            {learningPoints.slice(0, 3).map((point, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="w-full sm:w-[300px] bg-[#1e1a3a]/70 backdrop-blur-sm border border-[#2d2755] rounded-2xl p-8 group relative transition-all duration-500 hover:border-[#4a3f8a] hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-4 leading-snug">
+                  {point.title}
+                </h3>
+                <p className="text-gray-300 text-base md:text-lg opacity-90">
+                  {point.description}
+                </p>
+                <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-[#4a3f8a] rounded-tr-2xl transition-all duration-300 group-hover:w-20 group-hover:h-20" />
+              </motion.div>
+            ))}
+          </div>
 
-              {/* Content */}
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-4 leading-snug">
-                {point.title}
-              </h3>
-              <ul className="list-none space-y-3">
-                {point.description.map((item, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-start text-gray-300 text-sm sm:text-base leading-relaxed before:content-[''] before:block before:w-1.5 before:h-1.5 before:rounded-full before:bg-purple-400 before:mt-2 before:mr-3 before:flex-shrink-0"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
+          {/* Second Row: 2 Boxes Centered */}
+          <div className="flex justify-center gap-8">
+            {learningPoints.slice(3).map((point, index) => (
+              <motion.div
+                key={index + 3}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: (index + 3) * 0.1 }}
+                viewport={{ once: true }}
+                className="w-full sm:w-[300px] bg-[#1e1a3a]/70 backdrop-blur-sm border border-[#2d2755] rounded-2xl p-8 group relative transition-all duration-500 hover:border-[#4a3f8a] hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-4 leading-snug">
+                  {point.title}
+                </h3>
+                <p className="text-gray-300 text-base md:text-lg opacity-90">
+                  {point.description}
+                </p>
+                <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-[#4a3f8a] rounded-tr-2xl transition-all duration-300 group-hover:w-20 group-hover:h-20" />
+              </motion.div>
+            ))}
+          </div>
+        </div>
 
-              {/* Decorative corner */}
-              <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-[#4a3f8a] rounded-tr-xl transition-all duration-300 group-hover:w-20 group-hover:h-20" />
-            </div>
-          ))}
+        {/* CTA Button */}
+        <div className="flex justify-center">
+          <motion.a
+            href="https://dashboard.definedge.com/buy-product/training"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="relative overflow-hidden group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/30"
+          >
+            <span className="relative z-10 flex items-center justify-center gap-2">
+              Start with a FREE Webinar
+              <svg
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </span>
+            <span className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
+          </motion.a>
         </div>
       </div>
     </section>

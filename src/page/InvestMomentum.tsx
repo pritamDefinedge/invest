@@ -73,12 +73,12 @@ function App() {
             <Hero />
             <AreYou />
             <Introducing />
-            <WhatYouLearn />
-            <Mentors />
             <MasterMomentum />
             <OpenFree />
-            <Testimonials />
-            <Faq />
+            <Mentors />
+            <WhatYouLearn />
+            {/* <Testimonials /> */}
+            {/* <Faq /> */}
             <FooterBanner />
           </main>
           <Footer />

@@ -32,60 +32,30 @@ const Mentors: React.FC = () => {
               Prashant Shah
             </h3>
             <p className="text-gray-300 text-base sm:text-base md:text-base leading-relaxed">
-              Mr. Prashant Shah is the Co-founder and CEO of Definedge and the
-              first Indian to earn the prestigious MFTA designation from IFTA.
-              He also holds CMT, CFTe, and MSTA certifications, making him one
-              of the most highly qualified market technicians in the country.
+              The brain behind Definedge and a pioneer in momentum investing –
+              Prashant Shah will be your guide on this webinar. 
             </p>
             <p className="text-gray-300 text-base sm:text-base md:text-base leading-relaxed">
-              Widely respected for his research, Prashant is the author of five
-              well-regarded books, including his latest Master Momentum
-              Investing & Trading Strategies. His earlier works, such as
-              Profitable Trading with Renko, Point & Figure, Relative Strength
-              and Breadth Analysis, and more, have helped traders simplify
-              complex strategies.
+            Prashant Shah,
+              the Co-founder and CEO of Definedge is the first Indian to earn
+              the prestigious MFTA designation from IFTA his pioneering work on
+              swing trading strategies. He also has many accolades including
+              CMT, CFTe, and MSTA certifications, making him one of the most
+              highly qualified trading professionals in the country. 
             </p>
             <p className="text-gray-300 text-base sm:text-base md:text-base leading-relaxed">
-              Prashant is also the mind behind the Noiseless Trading approach
-              and several practical tools used by modern traders. His mission is
-              to empower traders with structured, independent thinking, helping
-              them move away from noise-driven decisions toward a disciplined,
-              rule-based approach.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Mentor: Raju Ranjan */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-10">
-          {/* Image */}
-          <div className="w-full md:w-3/12">
-            <img
-              src={rajuImg}
-              alt="Raju Ranjan"
-              className="w-full h-auto object-cover rounded-xl shadow-2xl"
-            />
-          </div>
-
-          {/* Content */}
-          <div className="w-full md:w-9/12 space-y-6">
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
-              Raju Ranjan
-            </h3>
-            <p className="text-gray-300 text-base sm:text-base md:text-base leading-relaxed">
-              Raju Ranjan is known for his structured approach to trading. With
-              years of hands-on experience in markets, he specializes in
-              momentum-based trading using rule-based systems. Raju brings
-              clarity to complex market behaviour and empowers traders to filter
-              strong opportunities through relative strength, volatility and
-              breadth analysis.
+            He has
+              authored various books on trading and investing, including five
+              best sellers and his recent contribution to Momentum Investing has
+              been through his book – Master Momentum Investing & Trading
+              Strategies. 
             </p>
             <p className="text-gray-300 text-base sm:text-base md:text-base leading-relaxed">
-              His sessions are known for bridging the gap between theory and
-              execution with a focus on simulations and real-world trade setups.
-              He believes in helping traders become independent and objective in
-              their decision-making.
+            He is a pioneer ins Noiseless trading and has helped
+              create various tools that help make trading objective. He is
+              focused on empowering traders through a disciplined, structured
+              and rule-based trading approach, helping them move away from
+              noise-ridden charts and emotional trading
             </p>
           </div>
         </div>
