@@ -7,13 +7,13 @@ const faqs = [
       "Anyone serious about trading momentum objectively and consistently. Basic market understanding is recommended. ",
   },
   {
-    question: "Q2. What’s the level of this training?",
+    question: "Q2. What is the level of this training?",
     answer:
-      "Beginner-friendly, but insightful for experienced traders as well.",
+      "Beginner-friendly but insightful for experienced traders as well.",
   },
   {
     question: "Q3. Is this a live or recorded session?",
-    answer: " It’s a live, online training conducted over GoToWebinar. ",
+    answer: " It is a live, online training conducted over GoToWebinar. ",
   },
   {
     question: "Q4. Will I get access to recordings? ",

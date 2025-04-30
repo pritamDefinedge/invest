@@ -64,7 +64,7 @@ function App() {
         <Mentors />
         <MasterMomentum />
         <OpenFree />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Faq />
         <FooterBanner />
       </main>

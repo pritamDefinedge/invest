@@ -194,9 +194,7 @@ const MasterMomentum: React.FC = () => {
             Master Momentum Trading
           </h2>
           <div className="flex items-center space-x-4">
-            <span className="text-gray-300 text-sm sm:text-base md:text-lg">
-              41 are interested
-            </span>
+          
            
             <button
               onClick={() => setShowSharePopup(true)}
@@ -245,10 +243,9 @@ const MasterMomentum: React.FC = () => {
                     Course Details
                   </h3>
                   <div className="space-y-1 text-sm sm:text-base md:text-base text-gray-300 leading-relaxed">
-                    <p>📅 Sat 3 May 2025 - Sun 4 May 2025</p>
+                    <p>📅 Sat 10th May 2025 - Sun 11th May 2025</p>
                     <p>🕙 10:00 AM – 5:00 PM</p>
-                    <p>⏱️ 11 Hours</p>
-                    <p>🎯 For Beginner Traders</p>
+                    {/* <p>🎯 For Beginner Traders</p> */}
                     <p>🌐 Online </p>
                     <p>🗣️ English & Hindi</p>
                   </div>

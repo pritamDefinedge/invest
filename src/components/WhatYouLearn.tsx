@@ -8,7 +8,7 @@ const WhatYouLearn: React.FC = () => {
     },
     {
       emoji: "💡",
-      description: "You will understand how professionals think, plan, and manage momentum trades.",
+      description: "You will understand how professionals think, plan and manage momentum trades.",
     },
     {
       emoji: "🎯",
@@ -32,11 +32,11 @@ const WhatYouLearn: React.FC = () => {
     },
     {
       emoji: "📚",
-      description: "With insights from mentors who’ve practiced Noiseless Trading for years, you’ll avoid common pitfalls and master consistency.",
+      description: "With insights from mentors who have practiced Noiseless Trading for years, you will avoid common pitfalls and master consistency.",
     },
     {
       emoji: "🧠",
-      description: "Most importantly, you will become a Noiseless Trader – focused, composed, and consistent.",
+      description: "Most importantly, you will become a Noiseless Trader – focused, composed and consistent.",
     },
   ];
 
@@ -50,7 +50,7 @@ const WhatYouLearn: React.FC = () => {
         {/* Header section */}
         <div className="text-center mb-12 px-4">
           <h2 className="text-sm sm:text-base md:text-lg font-semibold text-[#FFD9D9] mb-2 tracking-widest">
-            What You'll Learn
+            What You Will Learn
           </h2>
           <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-100 leading-snug">
             Your Evolution as a Power Trader

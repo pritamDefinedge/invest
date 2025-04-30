@@ -35,7 +35,7 @@ const AreYou: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-[#18152e] text-white overflow-hidden">
+    <section className="relative  px-4 sm:px-6 lg:px-8 bg-[#18152e] text-white overflow-hidden">
       {/* Top blur effect */}
       <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-[#0f0c29] via-[#18152e]/90 to-transparent backdrop-blur-lg z-10 pointer-events-none"></div>
 
@@ -53,7 +53,7 @@ const AreYou: React.FC = () => {
             Are You Facing These Challenges?
           </h2>
           <p className="max-w-2xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg opacity-90">
-            Common struggles that traders face – and exactly how we help solve them
+            Common struggles that traders face  and exactly how we help solve them
           </p>
         </div>
 

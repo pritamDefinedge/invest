@@ -14,7 +14,9 @@ const OpenFree: React.FC = () => {
     if (isValidIndianMobile(mobile)) {
       window.location.href = `https://signup.definedgesecurities.com/?dnum=${mobile}&ss=dsec-home`;
     } else {
-      alert("Please enter a valid 10-digit Indian mobile number (starting with 6-9).");
+      alert(
+        "Please enter a valid 10-digit Indian mobile number (starting with 6-9)."
+      );
     }
   };
 
@@ -39,8 +41,7 @@ const OpenFree: React.FC = () => {
                 </span>
               </h2>
               <p className="text-blue-100 mb-4 md:mb-6 text-sm sm:text-base md:text-lg">
-                Special Offer: 20% Off 'Master the Momentum'
-                <br className="hidden md:block" /> for Definedge Demat Users Only.
+                for Definedge Super Demat Account Holder's Only.
               </p>
             </div>
           </div>
@@ -50,7 +51,8 @@ const OpenFree: React.FC = () => {
             <div className="rounded-xl p-4 md:p-2">
               <p className="text-lg sm:text-xl md:text-2xl font-medium mb-6 text-white">
                 Open your{" "}
-                <span className="text-yellow-400 font-light">Free</span> Super Demat account
+                <span className="text-yellow-400 font-light">Free</span> Super
+                Demat account
               </p>
 
               <form className="space-y-4" onSubmit={handleSubmit}>
