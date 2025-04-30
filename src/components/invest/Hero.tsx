@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
             1 Webinar | 1 Tool | Momentum Investing Revolutionized
           </h4>
 
-          <p className="text-sm sm:text-base md:text-lg text-gray-50 mb-6 mx-auto max-w-xl sm:max-w-2xl">
+          <p className="text-sm my-6 sm:text-base md:text-md text-gray-50 mb-6 mx-auto max-w-xl sm:max-w-2xl">
             Invest in outperformers with Momentify in 1-click with quick, clear analysis. But first, begin with learning
             about momentum from the expert who made Momentify
           </p>
