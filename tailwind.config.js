@@ -30,12 +30,17 @@ module.exports = {
         center: true,
         padding: '1rem',
       },
-      backgroundImage: theme => ({
-        'diwali-gradient': "radial-gradient(circle, rgba(255,192,2,1) 5%, rgba(237,172,10,1) 49%, rgba(255,159,2,1) 71%, rgba(255,138,4,1) 100%)",
-      }),
-      borderWidth: {
-        '3': '3px',
-      }
+      animation: {
+        float1: 'float 6s ease-in-out infinite',
+        float2: 'float 8s ease-in-out infinite',
+        float3: 'float 7s ease-in-out infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+      },
     },
   },
   plugins: [],

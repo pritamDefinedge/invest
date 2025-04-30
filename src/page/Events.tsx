@@ -3,52 +3,43 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FooterBanner from "../components/FooterBanner";
 import Hero from "../components/Hero";
-import Banner from "../components/Banner";
-import HelpCourse from "../components/HelpCourse";
-import Program from "../components/Program";
-import DoCourse from "../components/DoCourse";
-import WhatYouWillLearn from "../components/WhatYouWillLearn";
-import CourseDuration from "../components/CourseDuration";
-import TopicsCovered from "../components/TopicsCovered";
-import EventDetails from "../components/EventDetails";
-import EndEvent from "../components/EndEvent";
+import AreYou from "../components/AreYou";
+import Introducing from "../components/Introducing";
+import WhatYouLearn from "../components/WhatYouLearn";
+import Mentors from "../components/Mentors";
+import MasterMomentum from "../components/MasterMomentum";
+import OpenFree from "../components/OpenFree";
+import Testimonials from "../components/Testimonials";
+import Faq from "../components/Faq";
 import { ArrowUpIcon } from "@heroicons/react/24/solid";
 import Lenis from "@studio-freight/lenis";
 
 function App() {
   const [scrollTop, setScrollTop] = useState(false);
-  const [showHome, setShowHome] = useState(true);
   const lenisRef = useRef<Lenis | null>(null);
 
-  // Initialize Lenis and scroll events
+  // Initialize Lenis and scroll detection
   useEffect(() => {
-    // Set up Lenis smooth scrolling
+    // Smooth scrolling with Lenis
     lenisRef.current = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
     });
 
-    // RAF loop for Lenis
+    // RAF loop
     const raf = (time: number) => {
       lenisRef.current?.raf(time);
       requestAnimationFrame(raf);
     };
     requestAnimationFrame(raf);
 
-    // Check event date range
-    const currentDate = new Date();
-    const startDate = new Date("2025-03-23");
-    const endDate = new Date("2025-04-24T12:00:00");
-    setShowHome(currentDate >= startDate && currentDate <= endDate);
-
-    // Set up scroll listener
+    // Scroll detection for button visibility
     const handleScroll = () => {
       setScrollTop(window.scrollY > 100);
     };
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup
     return () => {
       lenisRef.current?.destroy();
       window.removeEventListener("scroll", handleScroll);
@@ -66,24 +57,19 @@ function App() {
     <div className="min-h-screen">
       <Header />
       <main>
-        {showHome ? (
-          <>
-            <Hero />
-            <Banner />
-            <HelpCourse />
-            <Program />
-            <DoCourse />
-            <WhatYouWillLearn />
-            <CourseDuration />
-            <TopicsCovered />
-            <EventDetails />
-            <FooterBanner />
-          </>
-        ) : (
-          <EndEvent />
-        )}
+        <Hero />
+        <AreYou />
+        <Introducing />
+        <WhatYouLearn />
+        <Mentors />
+        <MasterMomentum />
+        <OpenFree />
+        <Testimonials />
+        <Faq />
+        <FooterBanner />
       </main>
       <Footer />
+
       {/* Scroll To Top Button */}
       <button
         className={`fixed ${

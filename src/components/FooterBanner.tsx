@@ -4,7 +4,7 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const FooterBanner: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-[rgba(35,33,58,1)] text-white py-16">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12">
         {/* Definedge Section */}
         <div className="space-y-6">
