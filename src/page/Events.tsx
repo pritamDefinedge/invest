@@ -40,8 +40,8 @@ function App() {
 
     // Check event date range
     const currentDate = new Date();
-    const startDate = new Date("2025-03-23");
-    const endDate = new Date("2025-02-24T12:00:00");
+    const startDate = new Date("2025-04-23");
+    const endDate = new Date("2025-05-24T12:00:00");
     setShowHome(currentDate >= startDate && currentDate <= endDate);
 
     // Set up scroll listener
