@@ -41,7 +41,8 @@ const OpenFree: React.FC = () => {
                 </span>
               </h2>
               <p className="text-blue-100 mb-4 md:mb-6 text-sm sm:text-base md:text-lg">
-                for Definedge Super Demat Account Holder's Only.
+                For Definedge Super Demat Account Holders 20% Off (Apply Code :
+                MYDSEC20)
               </p>
             </div>
           </div>
