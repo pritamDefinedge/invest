@@ -49,7 +49,7 @@ const OpenFree: React.FC = () => {
       );
 
       if (response.ok) {
-        alert("Thank you for registering! Check your email for the webinar link.");
+        alert("Thank you for registering!");
         setName("");
         setEmail("");
         setMobile("");
