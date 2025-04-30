@@ -23,7 +23,7 @@ const HeroSection: React.FC = () => {
       <div className="absolute bottom-1/4 left-1/4 w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 bg-gray-900 rounded-full blur-[100px] opacity-20 animate-[float_15s_ease-in-out_infinite]" />
 
       {/* Text Content */}
-      <div className="absolute bottom-0 w-full z-10 px-4 pb-16 sm:pb-20 md:pb-24 text-center">
+      <div className="absolute bottom-0 w-full z-10 px-4 pb-16 sm:pb-24 md:pb-48 text-center">
         <div className="max-w-3xl sm:max-w-4xl mx-auto">
           {/* Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 text-white">
