@@ -42,9 +42,7 @@ const HeroSection: React.FC = () => {
 
           <div className="flex justify-center">
             <a
-              href="https://dashboard.definedge.com/buy-product/training"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#formId"
               className="relative overflow-hidden group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-3 px-6 sm:px-8 rounded-md transition-all duration-300 hover:shadow-md hover:shadow-purple-500/30"
             >
               <span className="relative z-10 flex items-center justify-center">

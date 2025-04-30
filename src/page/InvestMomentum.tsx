@@ -74,8 +74,8 @@ function App() {
             <AreYou />
             <Introducing />
             <MasterMomentum />
-            <OpenFree />
             <Mentors />
+            <OpenFree />
             <WhatYouLearn />
             {/* <Testimonials /> */}
             {/* <Faq /> */}

@@ -63,7 +63,7 @@ const OpenFree: React.FC = () => {
   };
 
   return (
-    <section className="py-16 px-4 sm:px-6 bg-gradient-to-b from-[#0f0c29] to-[#1a1633]">
+    <section className="py-16 px-4 sm:px-6 bg-gradient-to-b from-[#0f0c29] to-[#1a1633]" id="formId">
       <div className="max-w-6xl mx-auto">
         <div className="relative overflow-hidden bg-gradient-to-br from-[#091E40] via-[#0A2B5A] to-[#0c3368] rounded-2xl p-8 md:p-10 shadow-2xl">
           {/* Floating background elements */}

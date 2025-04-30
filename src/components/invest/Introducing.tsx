@@ -108,9 +108,8 @@ const Introducing: React.FC = () => {
         {/* CTA Button */}
         <div className="flex justify-center">
           <motion.a
-            href="https://dashboard.definedge.com/buy-product/training"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#formId"
+         
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="relative overflow-hidden group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/30"

@@ -264,15 +264,18 @@ const MasterMomentum: React.FC = () => {
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 md:gap-0">
                   <div className="flex flex-col items-center text-center md:text-left">
                     {/* Price Label with Gradient Background */}
-              
+
                     <span className="text-lg font-medium text-green-500 mt-2">
-                      Free
+                      Fee - Free
                     </span>
                   </div>
                 </div>
 
                 {/* CTA Button */}
-                <button className="shine shine-anim w-full bg-[#5928E5] hover:bg-[#4a1fd1] text-white font-bold py-3 px-6 rounded-xl shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">
+                <a
+                  href="#formId"
+                  className="shine shine-anim w-full bg-[#5928E5] hover:bg-[#4a1fd1] text-white font-bold py-3 px-6 rounded-xl shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl inline-block text-center"
+                >
                   <span className="relative z-10 flex items-center justify-center">
                     Register Now
                     <svg
@@ -290,7 +293,7 @@ const MasterMomentum: React.FC = () => {
                       />
                     </svg>
                   </span>
-                </button>
+                </a>
               </div>
             </div>
           </div>

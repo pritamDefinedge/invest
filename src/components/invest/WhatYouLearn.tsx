@@ -69,7 +69,7 @@ const WhatYouLearn: React.FC = () => {
         <button
           onClick={() =>
             window.open(
-              "https://dashboard.definedge.com/buy-product/training",
+              "https://signup.definedgesecurities.com/",
               "_blank"
             )
           }

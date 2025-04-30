@@ -12,9 +12,7 @@ const Header: React.FC = () => {
 
         {/* Enroll Button Right */}
         <a
-          href="https://dashboard.definedge.com/buy-product/training"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#formId"
           className="bg-[rgba(255,217,217,1)] hover:bg-[rgba(255,217,217,0.9)] text-black px-5 py-2 rounded-md text-sm font-medium transition-colors"
         >
           Enroll
