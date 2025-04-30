@@ -1,30 +1,35 @@
 import React from "react";
-import Icon from "../assets/areyou.svg";
-import marketImg from "../assets/market-research.svg"
+
+import icon1 from "../assets/youare1.svg";
+import icon2 from "../assets/youare2.svg";
+import icon3 from "../assets/youare3.svg";
+import icon4 from "../assets/youare4.svg";
+import icon5 from "../assets/youare5.svg";
+import icon6 from "../assets/youare6.svg";
 const AreYou: React.FC = () => {
   const learningPoints = [
     {
-      emoji: marketImg,
+      emoji: icon1,
       description: "Unsure how to identify strong stocks or the right entry points?",
     },
     {
-      emoji: Icon,
+      emoji: icon2,
       description: "Feel overwhelmed by market noise, tips and conflicting signals?",
     },
     {
-      emoji: Icon,
+      emoji: icon3,
       description: "Keep jumping between strategies without clarity or conviction? ",
     },
     {
-      emoji: Icon,
+      emoji: icon4,
       description: "Struggle with inconsistent results or emotional trading? ",
     },
     {
-      emoji: Icon,
+      emoji: icon5,
       description: "Eager to catch strong moves early and exit at the right time?",
     },
     {
-      emoji: Icon,
+      emoji: icon6,
       description: "Want to master a structured momentum trading approach that works across timeframes? ",
     },
   ];

@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "../assets/hero.svg";
+import Banner from "../assets/hero.jpg";
 
 const HeroSection: React.FC = () => {
   return (
