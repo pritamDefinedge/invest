@@ -78,7 +78,7 @@ const Mentors: React.FC = () => {
               years of hands-on experience in markets, he specializes in
               momentum-based trading using rule-based systems. Raju brings
               clarity to complex market behaviour and empowers traders to filter
-              strong opportunities through relative strength, volatility, and
+              strong opportunities through relative strength, volatility and
               breadth analysis.
             </p>
             <p className="text-gray-300 text-base sm:text-base md:text-base leading-relaxed">

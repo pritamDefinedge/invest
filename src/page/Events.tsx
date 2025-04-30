@@ -11,35 +11,46 @@ import MasterMomentum from "../components/MasterMomentum";
 import OpenFree from "../components/OpenFree";
 import Testimonials from "../components/Testimonials";
 import Faq from "../components/Faq";
+
+import EndEvent from "../components/EndEvent";
+
 import { ArrowUpIcon } from "@heroicons/react/24/solid";
 import Lenis from "@studio-freight/lenis";
 
 function App() {
   const [scrollTop, setScrollTop] = useState(false);
+  const [showHome, setShowHome] = useState(true);
   const lenisRef = useRef<Lenis | null>(null);
 
-  // Initialize Lenis and scroll detection
+  // Initialize Lenis and scroll events
   useEffect(() => {
-    // Smooth scrolling with Lenis
+    // Set up Lenis smooth scrolling
     lenisRef.current = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
     });
 
-    // RAF loop
+    // RAF loop for Lenis
     const raf = (time: number) => {
       lenisRef.current?.raf(time);
       requestAnimationFrame(raf);
     };
     requestAnimationFrame(raf);
 
-    // Scroll detection for button visibility
+    // Check event date range
+    const currentDate = new Date();
+    const startDate = new Date("2025-03-23");
+    const endDate = new Date("2025-02-24T12:00:00");
+    setShowHome(currentDate >= startDate && currentDate <= endDate);
+
+    // Set up scroll listener
     const handleScroll = () => {
       setScrollTop(window.scrollY > 100);
     };
     window.addEventListener("scroll", handleScroll);
 
+    // Cleanup
     return () => {
       lenisRef.current?.destroy();
       window.removeEventListener("scroll", handleScroll);
@@ -57,19 +68,24 @@ function App() {
     <div className="min-h-screen">
       <Header />
       <main>
-        <Hero />
-        <AreYou />
-        <Introducing />
-        <WhatYouLearn />
-        <Mentors />
-        <MasterMomentum />
-        <OpenFree />
-        {/* <Testimonials /> */}
-        <Faq />
-        <FooterBanner />
+        {showHome ? (
+          <>
+            <Hero />
+            <AreYou />
+            <Introducing />
+            <WhatYouLearn />
+            <Mentors />
+            <MasterMomentum />
+            <OpenFree />
+            {/* <Testimonials /> */}
+            <Faq />
+            <FooterBanner />
+          </>
+        ) : (
+          <EndEvent />
+        )}
       </main>
       <Footer />
-
       {/* Scroll To Top Button */}
       <button
         className={`fixed ${
