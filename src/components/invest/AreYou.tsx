@@ -109,7 +109,7 @@ const AreYou: React.FC = () => {
                 the right education
               </span>{" "}
               and{" "}
-              <span className="font-semibold text-white">the right tool</span>
+              <span className="font-semibold text-white">the right platform </span>
             </p>
           </div>
         </div>
