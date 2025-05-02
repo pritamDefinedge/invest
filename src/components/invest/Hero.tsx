@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import blurimage from "../../assets/blurimage.svg";
+import investBanner from "../../assets/investBanner.svg";
 import EventCountdown from "./EventCountdown";
 const HeroSection: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -151,7 +152,7 @@ const HeroSection: React.FC = () => {
           <div
             className="absolute inset-0 w-full h-full"
             style={{
-              backgroundImage: `url("/investBanner.svg"),  linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(2 32 11) 50%, rgba(0, 0, 0, 0) 100%)`,
+              backgroundImage: `url(${investBanner}),  linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(2 32 11) 50%, rgba(0, 0, 0, 0) 100%)`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
