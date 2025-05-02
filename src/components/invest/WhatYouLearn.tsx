@@ -8,7 +8,7 @@ const WhatYouLearn: React.FC = () => {
     },
     {
       description:
-        "For transformative education, actionable analysis & seamless trading, explore 15+ Innovative tool.s  ",
+        "For transformative education, actionable analysis & seamless trading, explore 15+ Innovative tools  ",
     },
     {
       description:
