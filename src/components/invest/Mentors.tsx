@@ -39,6 +39,7 @@ const Mentors: React.FC = () => {
               className=" mr-2 inline-flex items-center text-gray-50 hover:underline"
             >
               <svg
+              className="mr-2"
                 width="20"
                 height="19"
                 viewBox="0 0 20 19"

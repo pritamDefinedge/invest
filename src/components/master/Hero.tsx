@@ -1,22 +1,22 @@
 import React from "react";
-import Banner from "../../assets/hero.jpg";
+// import Banner from "../../assets/hero.jpg";
 
 const HeroSection: React.FC = () => {
   return (
     <div className="relative overflow-hidden min-h-[500px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] flex items-center justify-center">
       {/* Background Image */}
+
       <div
-        className="absolute inset-0 w-full h-full z-0"
+        className="absolute inset-0 w-full h-full"
         style={{
-          backgroundImage: `url(${Banner})`,
+          backgroundImage: `url("/hero.jpg"), linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(2 32 11) 50%, rgba(0, 0, 0, 0) 100%)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+          backgroundBlendMode: "overlay",
         }}
       />
-
-      {/* Dark Blur Overlay */}
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-sm z-0" />
 
       {/* Floating Blurred Blobs */}
       <div className="absolute top-1/4 right-1/4 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-gray-900 rounded-full blur-[80px] opacity-20 animate-[float_12s_ease-in-out_infinite]" />
@@ -39,7 +39,8 @@ const HeroSection: React.FC = () => {
 
           {/* Description */}
           <p className="text-sm sm:text-base md:text-base text-gray-50 mb-6 mx-auto max-w-xl sm:max-w-2xl">
-            Learn & Develop a Momentum Trading Engine and Execute High-Probability Strategies with Clarity
+            Learn & Develop a Momentum Trading Engine and Execute
+            High-Probability Strategies with Clarity
           </p>
 
           {/* CTA Button */}
