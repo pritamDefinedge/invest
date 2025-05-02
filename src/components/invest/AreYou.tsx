@@ -2,14 +2,14 @@ import React from "react";
 
 const AreYou: React.FC = () => {
   const leftPoints = [
-    "Invest in stocks that beat the market",
+    "Invest in stocks that beat the market ",
     "Ensure your portfolio recovers every time",
-    "Ride momentum trends with no effort",
+    "Ride momentum trends with no effort ",
   ];
 
   const rightPoints = [
-    "Invest objectively, unfazed by emotions",
-    "Catch trends and exit at the right time",
+    "Invest objectively, unfazed by emotions ",
+    "Catch trends and exit at the right time ",
   ];
 
   return (
@@ -33,7 +33,7 @@ const AreYou: React.FC = () => {
           </h2>
           <p className="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg md:text-xl opacity-90 leading-relaxed mt-4 sm:mt-6">
             The market has weathered many storms over the years and even as the
-            market recovers from each crash, most portfolios don't.
+            market recovers from each crash, most portfolios don’t.
           </p>
         </div>
 
@@ -106,8 +106,8 @@ const AreYou: React.FC = () => {
               You can and all it takes is two things –{" "}
               <span className="font-semibold text-white">
                 the right education
-              </span> {" "}
-              and {" "}
+              </span>{" "}
+              and{" "}
               <span className="font-semibold text-white">the right tool</span>
             </p>
           </div>

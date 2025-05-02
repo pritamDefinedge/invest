@@ -190,14 +190,14 @@ const MasterMomentum: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section with Title and Description */}
         <div className="flex flex-col justify-center items-center text-center mb-8">
-          <h2 className="text-2xl sm:text-3xl md:text-3xl font-semibold text-white mb-4 md:mb-0">
-            Join Exclusive Webinar Start with FREE Learning
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-4 md:mb-0">
+            Join Exclusive Webinar Start with <span className="text-yellow-400">FREE</span>  Learning
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Before you explore and invest with Momentify, start with an
-            exclusive webinar. Understand the what and how of momentum, how your
-            portfolio can grow with momentum investing, and how you can invest
-            with Momentify.
+          Before you explore and invest with Momentify, start with an exclusive webinar. 
+          </p>
+          <p className="text-gray-300 max-w-2xl mx-auto">
+          Understand the what and how of momentum, how your portfolio can grow with momentum investing and how you can invest with Momentify  
           </p>
         </div>
 

@@ -4,22 +4,22 @@ import { motion } from "framer-motion";
 const WhatYouLearn: React.FC = () => {
   const learningPoints = [
     {
-      description: "Access an ecosystem that makes you market-ready",
+      description: "Access an ecosystem that makes you market-ready ",
     },
     {
       description:
-        "Explore 15+ tools for transformative education, actionable analysis & seamless trading ",
+        "For transformative education, actionable analysis & seamless trading, explore 15+ Innovative tool.s  ",
     },
     {
       description:
-        "Learn with 3 expert-guided courses worth ₹11,775, for you at no cost",
+        "Learn with 3 expert-guided courses worth ₹11,775, for you at no cost ",
     },
     {
       description:
-        "Navigate the Definedge ecosystem with your unique GrowthMap",
+        "Navigate the Definedge ecosystem with your unique GrowthMap ",
     },
     {
-      description: "Analyze & trade like a PRO with 2 months’ free trial ",
+      description: "Analyze & trade like a PRO with 2 months’ free trial ",
     },
     {
       description: "Get all your PRO subscriptions, effectively Free! ",
@@ -110,10 +110,7 @@ const WhatYouLearn: React.FC = () => {
         >
           <motion.button
             onClick={() =>
-              window.open(
-                "https://signup.definedgesecurities.com/",
-                "_blank"
-              )
+              window.open("https://signup.definedgesecurities.com/", "_blank")
             }
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

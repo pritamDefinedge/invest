@@ -6,12 +6,12 @@ const Introducing: React.FC = () => {
     {
       title: "Learn Momentum",
       description:
-        "Start with an expert-guided module that explores momentum investing from scratch to advanced investment strategies",
+        "Start with an expert-guided module that explore momentum investing from scratch to advanced investment strategies ",
     },
     {
       title: "Deploy Strategies",
       description:
-        "Choose from expert-created strategies or make your own based on funda-techno insights to best suit your goals",
+        "Choose from expert-created strategies or make your own based on funda-techno insights to best suit your goals ",
     },
     {
       title: "Backtest Your Way",
@@ -214,8 +214,8 @@ const Introducing: React.FC = () => {
             </h2>
             <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 opacity-90 leading-relaxed">
               From the creators of OPSTRA comes the momentum trading engine that
-              lets you analyze, backtest and invest in a few clicks. Faster than
-              you can say "Momentify makes Momentum Investing Super-simple".
+              lets you analyse, backtest and invest in a few clicks. Faster than
+              you can say ‘Momentify makes Momentum Investing Super-simple'.
             </p>
           </motion.div>
 
@@ -289,7 +289,7 @@ const Introducing: React.FC = () => {
           </div>
 
           <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-            <div className="inline-block align-bottom bg-gradient-to-br from-[#091E40] via-[#0A2B5A] to-[#0c3368] rounded-2xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+            <div className="inline-block align-bottom bg-gradient-to-br from-[#091E40] via-[#0A2B5A] to-[#0c3368] rounded-2xl text-left overflow-hidden shadow-xl transform transition-all sm:my-16 sm:align-middle sm:max-w-lg sm:w-full">
               <div className="relative p-8 md:p-10">
                 <button
                   onClick={closeModal}
@@ -395,7 +395,7 @@ const Introducing: React.FC = () => {
 
                         {/* Text-based CAPTCHA */}
                         <div className="mt-4">
-                          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                          <div className="flex flex-row sm:flex-row items-start sm:items-center gap-4">
                             <div className="flex items-center justify-center bg-white/10 p-3 rounded-lg">
                               <span className="text-white font-mono text-lg tracking-widest select-none">
                                 {captchaText}
