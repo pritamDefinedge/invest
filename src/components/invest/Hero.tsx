@@ -58,7 +58,7 @@ const HeroSection: React.FC = () => {
     window.onRecaptchaLoad = () => {
       if (recaptchaRef.current && window.grecaptcha) {
         window.grecaptcha.render(recaptchaRef.current, {
-          sitekey: "6LcceCsrAAAAALv0x92EnDVU9YtWBzaKJDprwKjp",
+          sitekey: "6LeydysrAAAAACgJRbgd-EOZmQ53zrwQCr0K14DB",
           callback: "onRecaptchaSuccess",
           "expired-callback": "onRecaptchaExpired",
           size: "normal",
