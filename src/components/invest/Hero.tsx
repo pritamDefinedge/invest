@@ -156,7 +156,7 @@ const HeroSection: React.FC = () => {
           }}
         />
 
-        {/* Dark Blur Overlay */}
+        {/*  Overlay */}
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-0" />
 
         {/* Floating Blurred Blobs */}
@@ -166,20 +166,18 @@ const HeroSection: React.FC = () => {
         {/* Text Content */}
         <div className="relative z-10 px-4 pb-4 sm:pb-24 md:pb-24 text-center">
           <div className="max-w-3xl sm:max-w-4xl mx-auto">
-            <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight mb-4 text-white">
+            <h1 className="text-4xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight mb-4 text-white">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-100 to-blue-100">
-                Invest in Momentum, Not Stocks
+              Free Webinar: How to Build an Outperforming Portfolio
               </span>
             </h1>
 
-            <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-2">
+            {/* <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-2">
               1 Webinar | 1 Platform | Momentum Investing Revolutionized
-            </h4>
+            </h4> */}
 
             <p className="text-sm my-6 sm:text-base md:text-md text-gray-50 mb-6 mx-auto max-w-xl sm:max-w-2xl">
-              Invest in outperformers with Momentify in 1-click with quick,
-              clear analysis. But first, begin with learning about momentum from
-              the expert who made Momentify
+            Discover the power of momentum investing in this step-by-step session. Learn practical techniques to build a smarter portfolio and take control of your investments — like your own fund manager.
             </p>
 
             <div className="flex justify-center">

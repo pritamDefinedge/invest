@@ -2,14 +2,15 @@ import React from "react";
 
 const AreYou: React.FC = () => {
   const leftPoints = [
-    "Invest in stocks that beat the market ",
-    "Ensure your portfolio recovers every time",
-    "Ride momentum trends with no effort ",
+    "Learn proven, research-backed momentum investing principles",
+    "Invest in stocks that consistently outperform the market",
+    "Build a portfolio designed to deliver long-term outperformance",
   ];
 
   const rightPoints = [
-    "Invest objectively, unfazed by emotions ",
-    "Catch trends and exit at the right time ",
+    "Ride momentum trends using smart, data-driven tools",
+    "Make objective investment decisions — free from emotions",
+    "Automate stock selection with powerful, easy-to-use tools",
   ];
 
   return (
@@ -62,7 +63,7 @@ const AreYou: React.FC = () => {
                         />
                       </svg>
                     </div>
-                    <span className="text-gray-200 text-base sm:text-lg md:text-xl group-hover:text-white transition-colors duration-300">
+                    <span className="text-gray-200 text-base sm:text-base md:text-base group-hover:text-white transition-colors duration-300">
                       {point}
                     </span>
                   </li>
@@ -91,7 +92,7 @@ const AreYou: React.FC = () => {
                         />
                       </svg>
                     </div>
-                    <span className="text-gray-200 text-base sm:text-lg md:text-xl group-hover:text-white transition-colors duration-300">
+                    <span className="text-gray-200 text-base sm:text-base md:text-base group-hover:text-white transition-colors duration-300">
                       {point}
                     </span>
                   </li>

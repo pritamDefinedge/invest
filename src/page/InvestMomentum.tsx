@@ -13,6 +13,9 @@ import OpenFree2 from "../components/invest/OpenFree2";
 import Testimonials from "../components/invest/Testimonials";
 import Faq from "../components/invest/Faq";
 
+import UpcommingEvents from "../components/invest/UpcommingEvents";
+
+
 import EndEvent from "../components/invest/EndEvent";
 
 import { ArrowUpIcon } from "@heroicons/react/24/solid";
@@ -81,6 +84,8 @@ function App() {
             <WhatYouLearn />
             {/* <Testimonials /> */}
             {/* <Faq /> */}
+            <UpcommingEvents />
+
             <FooterBanner />
           </main>
           <Footer />

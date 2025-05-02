@@ -31,6 +31,26 @@ const Mentors: React.FC = () => {
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
               Prashant Shah
             </h3>
+            <a
+              href="https://twitter.com/Prashantshah267"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" mr-2 inline-flex items-center text-gray-50 hover:underline"
+            >
+              <svg
+                width="20"
+                height="19"
+                viewBox="0 0 20 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.47463 0L10.9824 6.28986L16.5701 0H18.411L18.2902 0.437381L11.9725 7.58596L20 18.7552L19.872 19H13.7773L8.44252 11.719L1.8409 19H0L7.37081 10.4189L0.125965 0H6.47463ZM16.8871 17.3959L16.4834 16.6165L5.52269 1.60407H3.17382L14.5382 17.3969H16.8871V17.3959Z"
+                  fill="white"
+                />
+              </svg>
+              @Prashantshah267
+            </a>
             <p className="text-gray-300 text-base sm:text-base md:text-base leading-relaxed">
               Mr. Prashant Shah is the Co-founder and CEO of Definedge and the
               first Indian to earn the prestigious MFTA designation from IFTA.
@@ -73,6 +93,26 @@ const Mentors: React.FC = () => {
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
               Raju Ranjan
             </h3>
+            <a
+              href="https://twitter.com/rajran06"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" mr-2 inline-flex items-center text-gray-50 hover:underline"
+            >
+              <svg
+                width="20"
+                height="19"
+                viewBox="0 0 20 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.47463 0L10.9824 6.28986L16.5701 0H18.411L18.2902 0.437381L11.9725 7.58596L20 18.7552L19.872 19H13.7773L8.44252 11.719L1.8409 19H0L7.37081 10.4189L0.125965 0H6.47463ZM16.8871 17.3959L16.4834 16.6165L5.52269 1.60407H3.17382L14.5382 17.3969H16.8871V17.3959Z"
+                  fill="white"
+                />
+              </svg>
+              @rajran06
+            </a>
             <p className="text-gray-300 text-base sm:text-base md:text-base leading-relaxed">
               Raju Ranjan is known for his structured approach to trading. With
               years of hands-on experience in markets, he specializes in
