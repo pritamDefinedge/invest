@@ -9,6 +9,7 @@ import WhatYouLearn from "../components/invest/WhatYouLearn";
 import Mentors from "../components/invest/Mentors";
 import MasterMomentum from "../components/invest/MasterMomentum";
 import OpenFree from "../components/invest/OpenFree";
+import OpenFree2 from "../components/invest/OpenFree_old";
 import Testimonials from "../components/invest/Testimonials";
 import Faq from "../components/invest/Faq";
 
@@ -76,6 +77,7 @@ function App() {
             <MasterMomentum />
             <Mentors />
             <OpenFree />
+            <OpenFree2 />
             <WhatYouLearn />
             {/* <Testimonials /> */}
             {/* <Faq /> */}
