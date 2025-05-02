@@ -8,13 +8,13 @@ const MasterMomentum: React.FC = () => {
 
   const shareOnPlatform = (platform: string) => {
     let shareUrl = "";
-    const title = "Check out this amazing free online webinar on! ";
+    const title = "Check out this amazing free online webinar on";
     const text = "Momentum Investing";
 
     switch (platform) {
       case "whatsapp":
         shareUrl = `https://wa.me/?text=${encodeURIComponent(
-          `${title} - ${text} ${pageUrl}`
+          `${title} ${text} ${pageUrl}`
         )}`;
         break;
       case "facebook":
@@ -24,12 +24,12 @@ const MasterMomentum: React.FC = () => {
         break;
       case "twitter":
         shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-          `${text} ${pageUrl}`
+          `${title} ${text} ${pageUrl}`
         )}`;
         break;
       case "linkedin":
         shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-          pageUrl
+          `${title} ${text} ${pageUrl}`
         )}`;
         break;
 
