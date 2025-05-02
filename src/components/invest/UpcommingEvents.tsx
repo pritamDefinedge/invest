@@ -1,158 +1,131 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCreative, Autoplay, Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-creative";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import pathsalaImg from "../../assets/pathsala.png";
+import traderNestImg from "../../assets/tradernest.png";
 
 const UpcomingEvents = () => {
   const events = [
     {
       id: 1,
-      title: "Financial Freedom Workshop",
-      date: "15 Oct 2023",
-      location: "New York",
-      description: "Master personal finance strategies to build wealth",
-      image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+      title: "ONLINE MARKET पाठशाला",
+      image: pathsalaImg,
+      url: "https://www.definedge.com/online-market-pathshala-2025/",
+      date: "May 15, 2025",
+      description:
+        "Master the art of online trading with our comprehensive course",
     },
     {
       id: 2,
-      title: "Crypto Investment Summit",
-      date: "22 Nov 2023",
-      location: "London",
-      description: "Discover next-gen blockchain opportunities",
-      image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+      title: "Online Traders NEST",
+      image: traderNestImg,
+      url: "https://www.definedge.com/online-traders-nest-april-2025/",
+      date: "June 2, 2025",
+      description:
+        "Join our exclusive community of traders and elevate your skills",
     },
-    {
-      id: 3,
-      title: "Retirement Planning Masterclass",
-      date: "05 Dec 2023",
-      location: "Tokyo",
-      description: "Secure your golden years with expert strategies",
-      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
-    },
-    {
-      id: 4,
-      title: "AI Trading Symposium",
-      date: "12 Jan 2024",
-      location: "Singapore",
-      description: "Leverage artificial intelligence in your portfolio",
-      image: "https://images.unsplash.com/photo-1677442135136-760c813a743d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-    }
   ];
 
   return (
-    <section className="relative py-20 bg-gradient-to-b from-gray-900 to-gray-800 overflow-hidden">
-      {/* Floating particles background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div 
-            key={i}
-            className="absolute rounded-full bg-white/10"
-            style={{
-              width: `${Math.random() * 10 + 2}px`,
-              height: `${Math.random() * 10 + 2}px`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animation: `float ${Math.random() * 10 + 10}s linear infinite`,
-              animationDelay: `${Math.random() * 5}s`
-            }}
-          />
-        ))}
-      </div>
+    <section className="relative py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute top-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[100px] animate-float"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-500/10 rounded-full blur-[120px] animate-float-delay"></div>
+      <div className="absolute top-1/3 left-1/4 w-40 h-40 bg-amber-500/5 rounded-full blur-[80px] animate-float-reverse"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
+          <span className="inline-block mb-3 text-sm font-semibold text-blue-400 bg-blue-900/30 px-4 py-1 rounded-full">
+            Don't Miss Out
+          </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Upcoming <span className="text-blue-400">Events</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              Upcoming Events
+            </span>
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Join our exclusive financial events to accelerate your investment journey
+            Elevate your trading skills with our exclusive events
           </p>
         </div>
 
-        <Swiper
-          grabCursor={true}
-          effect={"creative"}
-          creativeEffect={{
-            prev: {
-              shadow: true,
-              translate: [0, 0, -400],
-            },
-            next: {
-              translate: ["100%", 0, 0],
-            },
-          }}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          }}
-          pagination={{
-            clickable: true,
-            el: '.swiper-pagination',
-            type: 'bullets',
-          }}
-          modules={[EffectCreative, Autoplay, Navigation, Pagination]}
-          className="h-[500px] w-full"
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-            },
-            1024: {
-              slidesPerView: 1.2,
-            },
-          }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {events.map((event) => (
-            <SwiperSlide key={event.id} className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-10 rounded-2xl" />
-              <img 
-                src={event.image} 
-                alt={event.title}
-                className="absolute inset-0 w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-700"
-              />
-              
-              <div className="relative z-20 h-full flex flex-col justify-end p-8 text-white">
-                <div className="mb-4 flex items-center space-x-4">
-                  <span className="bg-blue-500/90 text-white px-3 py-1 rounded-full text-sm font-medium">
+            <div
+              key={event.id}
+              className="group relative h-full rounded-2xl overflow-hidden"
+            >
+              {/* Glow effect container */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              {/* Main card */}
+              <a
+                href={event.url}
+                className="relative block h-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:border-blue-400/30 hover:shadow-blue-500/20"
+              >
+                {/* Image with overlay */}
+                <div className="relative h-48 overflow-hidden">
+                <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+
+                  {/* Date badge */}
+                  <div className="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg">
                     {event.date}
-                  </span>
-                  <span className="flex items-center">
-                    <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    {event.location}
-                  </span>
+                  </div>
+
+                  {/* Coming soon badge */}
+                  <div className="absolute top-4 right-4 bg-gray-900/80 text-white px-3 py-1 rounded-full text-xs font-medium border border-blue-400/30 flex items-center">
+                    <span className="relative flex h-2 w-2 mr-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                    </span>
+                    Coming Soon
+                  </div>
                 </div>
-                
-                <h3 className="text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors duration-300">
-                  {event.title}
-                </h3>
-                <p className="text-gray-300 mb-6 max-w-lg">{event.description}</p>
-                
-                <button className="self-start bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform group-hover:translate-x-2 group-hover:shadow-xl group-hover:shadow-blue-500/20">
-                  Register Now →
-                </button>
-              </div>
-            </SwiperSlide>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                    {event.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm mb-4 line-clamp-2">
+                    {event.description}
+                  </p>
+
+                  <div className="flex justify-between items-center mt-6">
+                    <span className="inline-flex items-center text-blue-400 text-sm font-medium">
+                      Learn more
+                      <svg
+                        className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M9 5l7 7-7 7"
+                        ></path>
+                      </svg>
+                    </span>
+
+                    <div className="flex space-x-2">
+                      <span className="text-xs bg-gray-700/50 text-gray-300 px-2 py-1 rounded">
+                        Online
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
           ))}
+        </div>
 
-          {/* Custom Navigation */}
-          <div className="swiper-button-next !text-white !right-4 after:!text-2xl" />
-          <div className="swiper-button-prev !text-white !left-4 after:!text-2xl" />
-          
-          {/* Custom Pagination */}
-          <div className="swiper-pagination !bottom-4" />
-        </Swiper>
+      
       </div>
-
-     
     </section>
   );
 };
