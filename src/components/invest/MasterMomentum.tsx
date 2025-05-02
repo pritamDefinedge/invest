@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MomentumImg from "../../assets/master_momentum_invest.png";
+import MomentumImg from "../../assets/master_momentum.svg";
 
 const MasterMomentum: React.FC = () => {
   const [showSharePopup, setShowSharePopup] = useState(false);
