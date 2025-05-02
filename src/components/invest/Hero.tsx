@@ -1,86 +1,37 @@
 import React, { useState, useEffect, useRef } from "react";
 import Banner from "../../assets/investBanner.svg";
 
-declare global {
-  interface Window {
-    grecaptcha?: {
-      render: (container: HTMLElement | string, parameters: any) => number;
-      reset: (widgetId?: number) => void;
-      getResponse: (widgetId?: number) => string;
-    };
-    onRecaptchaLoad?: () => void;
-    onRecaptchaSuccess?: (token: string) => void;
-    onRecaptchaExpired?: () => void;
-  }
-}
-
 const HeroSection: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     mobile: "",
+    captchaInput: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     success: boolean;
     message: string;
   } | null>(null);
-  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
-  const recaptchaRef = useRef<HTMLDivElement>(null);
+  const [captchaText, setCaptchaText] = useState("");
 
-  // Initialize callbacks
+  // Generate random CAPTCHA text
+  const generateCaptcha = () => {
+    const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let result = "";
+    for (let i = 0; i < 6; i++) {
+      result += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    setCaptchaText(result);
+    return result;
+  };
+
+  // Initialize CAPTCHA
   useEffect(() => {
-    window.onRecaptchaSuccess = (token: string) => {
-      setRecaptchaToken(token);
-    };
-    window.onRecaptchaExpired = () => {
-      setRecaptchaToken(null);
-    };
-
-    return () => {
-      delete window.onRecaptchaSuccess;
-      delete window.onRecaptchaExpired;
-    };
-  }, []);
-
-  // Load reCAPTCHA script
-  useEffect(() => {
-    if (!isModalOpen) return;
-
-    const script = document.createElement("script");
-    script.src =
-      "https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit";
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-
-    window.onRecaptchaLoad = () => {
-      if (recaptchaRef.current && window.grecaptcha) {
-        window.grecaptcha.render(recaptchaRef.current, {
-          sitekey: "6LeydysrAAAAACgJRbgd-EOZmQ53zrwQCr0K14DB",
-          callback: "onRecaptchaSuccess",
-          "expired-callback": "onRecaptchaExpired",
-          size: "normal",
-          theme: "light",
-        });
-      }
-    };
-
-    return () => {
-      document.body.removeChild(script);
-      delete window.onRecaptchaLoad;
-      if (window.grecaptcha) {
-        // Reset any existing reCAPTCHA widget
-        const widgets = document.querySelectorAll(".g-recaptcha");
-        widgets.forEach((widget) => {
-          const widgetId = widget.getAttribute("data-widget-id");
-          if (widgetId) {
-            window.grecaptcha?.reset(parseInt(widgetId));
-          }
-        });
-      }
-    };
+    if (isModalOpen) {
+      generateCaptcha();
+    }
   }, [isModalOpen]);
 
   const isValidIndianMobile = (number: string): boolean => {
@@ -109,11 +60,12 @@ const HeroSection: React.FC = () => {
     e.preventDefault();
     setSubmitStatus(null);
 
-    if (!recaptchaToken) {
+    if (formData.captchaInput !== captchaText) {
       setSubmitStatus({
         success: false,
-        message: "Please verify you're not a robot",
+        message: "CAPTCHA verification failed. Please try again.",
       });
+      generateCaptcha();
       return;
     }
 
@@ -154,7 +106,6 @@ const HeroSection: React.FC = () => {
             email: formData.email,
             phone: formData.mobile,
             additional_data: "Momentum Investing",
-            recaptcha_token: recaptchaToken,
           }),
         }
       );
@@ -166,8 +117,7 @@ const HeroSection: React.FC = () => {
           success: true,
           message: "Thank you for registering!",
         });
-        setFormData({ name: "", email: "", mobile: "" });
-        setRecaptchaToken(null);
+        setFormData({ name: "", email: "", mobile: "", captchaInput: "" });
         setTimeout(() => setIsModalOpen(false), 3000);
       } else {
         setSubmitStatus({
@@ -189,11 +139,9 @@ const HeroSection: React.FC = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setFormData({ name: "", email: "", mobile: "" });
+    setFormData({ name: "", email: "", mobile: "", captchaInput: "" });
     setSubmitStatus(null);
-    setRecaptchaToken(null);
   };
-
   return (
     <>
       <div className="relative overflow-hidden min-h-[500px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] flex items-center justify-center">
@@ -220,12 +168,12 @@ const HeroSection: React.FC = () => {
           <div className="max-w-3xl sm:max-w-4xl mx-auto">
             <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight mb-4 text-white">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-100 to-blue-100">
-              Invest in Momentum, Not Stocks 
+                Invest in Momentum, Not Stocks
               </span>
             </h1>
 
             <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-2">
-            1 Webinar  | 1 Platform | Momentum Investing Revolutionized 
+              1 Webinar | 1 Platform | Momentum Investing Revolutionized
             </h4>
 
             <p className="text-sm my-6 sm:text-base md:text-md text-gray-50 mb-6 mx-auto max-w-xl sm:max-w-2xl">
@@ -374,13 +322,46 @@ const HeroSection: React.FC = () => {
                           </div>
                         </div>
 
-                        {/* reCAPTCHA v2 Checkbox */}
-                        <div className="w-full justify-start md:justify-start">
-                          <div className="flex w-full justify-center md:justify-start">
-                            <div
-                              ref={recaptchaRef}
-                              className="scale-[0.85] sm:scale-1 transform origin-top"
-                            ></div>
+                        {/* Text-based CAPTCHA */}
+                        <div className="mt-4">
+                          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                            <div className="flex items-center justify-center bg-white/10 p-3 rounded-lg">
+                              <span className="text-white font-mono text-lg tracking-widest select-none">
+                                {captchaText}
+                              </span>
+                              <button
+                                type="button"
+                                onClick={() => generateCaptcha()}
+                                className="ml-3 text-white/70 hover:text-white transition-colors"
+                                aria-label="Refresh CAPTCHA"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="h-5 w-5"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                            <div className="flex-1">
+                              <input
+                                type="text"
+                                name="captchaInput"
+                                placeholder="Enter the text"
+                                className="w-full p-3 bg-white/5 text-white placeholder-white/50 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition duration-200"
+                                required
+                                value={formData.captchaInput}
+                                onChange={handleInputChange}
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -399,6 +380,7 @@ const HeroSection: React.FC = () => {
 
                       <button
                         type="submit"
+                        disabled={isSubmitting}
                         className={`w-full mt-6 relative overflow-hidden px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 group shadow-lg ${
                           isSubmitting ? "opacity-70 cursor-not-allowed" : ""
                         }`}
