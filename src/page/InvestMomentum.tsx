@@ -84,7 +84,7 @@ function App() {
             <WhatYouLearn />
             {/* <Testimonials /> */}
             {/* <Faq /> */}
-            <UpcommingEvents />
+            {/* <UpcommingEvents /> */}
 
             <FooterBanner />
           </main>
