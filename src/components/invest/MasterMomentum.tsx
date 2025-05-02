@@ -8,8 +8,8 @@ const MasterMomentum: React.FC = () => {
 
   const shareOnPlatform = (platform: string) => {
     let shareUrl = "";
-    const title = "Master Momentum Trading Course";
-    const text = "Check out this amazing trading course!";
+    const title = "Check out this amazing free online webinar on! ";
+    const text = "Momentum Investing";
 
     switch (platform) {
       case "whatsapp":

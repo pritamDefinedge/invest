@@ -220,12 +220,12 @@ const HeroSection: React.FC = () => {
           <div className="max-w-3xl sm:max-w-4xl mx-auto">
             <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight mb-4 text-white">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-100 to-blue-100">
-                Invest in Momentum, Not Stocks
+              Invest in Momentum, Not Stocks 
               </span>
             </h1>
 
             <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-2">
-              1 Webinar | 1 Tool | Momentum Investing Revolutionized
+            1 Webinar  | 1 Platform | Momentum Investing Revolutionized 
             </h4>
 
             <p className="text-sm my-6 sm:text-base md:text-md text-gray-50 mb-6 mx-auto max-w-xl sm:max-w-2xl">
@@ -379,7 +379,7 @@ const HeroSection: React.FC = () => {
                           <div className="flex w-full justify-center md:justify-start">
                             <div
                               ref={recaptchaRef}
-                              className="scale-[0.85] sm:scale-1 transform origin-top" 
+                              className="scale-[0.85] sm:scale-1 transform origin-top"
                             ></div>
                           </div>
                         </div>
