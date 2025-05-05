@@ -207,7 +207,7 @@ const WhatYouLearn: React.FC = () => {
         <div className="text-center px-4 sm:px-6 lg:px-8 mb-16">
           <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-900/50 to-blue-900/50 border border-purple-700/30 mb-6">
             <span className="text-sm font-medium text-pink-200 tracking-wider uppercase">
-              What Will You Learn?
+              What Will You Learn ?
             </span>
           </div>
 
@@ -217,7 +217,6 @@ const WhatYouLearn: React.FC = () => {
               <span className="bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
                 Power Trader
               </span>
-              <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-pink-500 rounded-full animate-pulse"></span>
             </span>
           </h2>
 
