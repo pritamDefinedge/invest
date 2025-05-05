@@ -3,6 +3,7 @@ import Logo from "../../assets/definedge_logo_mobile.svg";
 
 const OpenFree: React.FC = () => {
   const [mobile, setMobile] = useState("");
+  const [isCopied, setIsCopied] = useState(false);
 
   const isValidIndianMobile = (number: string): boolean => {
     return /^[6-9]\d{9}$/.test(number);
@@ -18,6 +19,12 @@ const OpenFree: React.FC = () => {
         "Please enter a valid 10-digit Indian mobile number (starting with 6-9)."
       );
     }
+  };
+
+  const copyCode = () => {
+    navigator.clipboard.writeText("MYDSEC20");
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000);
   };
 
   return (
@@ -41,28 +48,36 @@ const OpenFree: React.FC = () => {
                 </span>
               </h2>
               <p className="text-blue-100 mb-4 md:mb-6 text-sm sm:text-base md:text-lg">
-                For Definedge Super Demat Account Holders 20% Off (Apply Code :
-                <span className="inline-flex items-center gap-1 text-yellow-300 ml-1">
+                For Definedge Super Demat Account Holders 20% Off Apply Code :
+                <span className="inline-flex items-center gap-1 text-yellow-300 ml-1 relative">
                   MYDSEC20
                   <button
                     type="button"
-                    onClick={() => navigator.clipboard.writeText("MYDSEC20")}
-                    className="hover:text-yellow-200 transition"
+                    onClick={copyCode}
+                    className="hover:text-yellow-200 transition relative"
                     title="Copy Code"
                   >
                     <svg
-                      className="w-6 h-6"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      viewBox="0 0 24 24"
+                      className="w-6 h-6 ml-2 text-yellow-200"
+                      fill="#fde047"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                      enable-background="new 0 0 512 512"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2M16 8h2a2 2 0 012 2v8a2 2 0 01-2 2h-8a2 2 0 01-2-2v-2"
-                      />
+                      <g>
+                        <g>
+                          <path d="M480.6,109.1h-87.5V31.4c0-11.3-9.1-20.4-20.4-20.4H31.4C20.1,11,11,20.1,11,31.4v351c0,11.3,9.1,20.4,20.4,20.4h87.5    v77.7c0,11.3,9.1,20.4,20.4,20.4h341.3c11.3,0,20.4-9.1,20.4-20.4v-351C501,118.3,491.9,109.1,480.6,109.1z M51.8,362V51.8h300.4    v57.3H139.3c-11.3,0-20.4,9.1-20.4,20.4V362H51.8z M460.2,460.2H159.7V150h300.4V460.2z" />
+                          <path d="m233.3,254.4h155.8c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4h-155.8c-11.3,0-20.4,9.1-20.4,20.4 0,11.2 9.1,20.4 20.4,20.4z" />
+                          <path d="m233.3,396.6h155.8c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4h-155.8c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4z" />
+                        </g>
+                      </g>
                     </svg>
+                    {isCopied && (
+                      <span className="absolute -top-10 -right-4 bg-white/10 backdrop-blur-sm border border-white/20 text-green-300 text-xs px-3 py-1 rounded-md shadow-lg">
+                        Copied!
+                      </span>
+                    )}
                   </button>
                 </span>
               </p>
@@ -87,7 +102,7 @@ const OpenFree: React.FC = () => {
                     <input
                       type="tel"
                       placeholder="Enter Mobile Number"
-                      className="flex-grow p-3 bg-white/10 text-white placeholder-blue-200 border border-white/20 rounded-r-lg focus:outline-none focus:border-transparent transition duration-200"
+                      className="flex-grow p-3 w-full bg-white/10 text-white placeholder-blue-200 border border-white/20 rounded-r-lg focus:outline-none focus:border-transparent transition duration-200"
                       maxLength={10}
                       required
                       inputMode="numeric"
