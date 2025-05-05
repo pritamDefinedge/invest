@@ -47,7 +47,7 @@ const AreYou: React.FC = () => {
         {/* Header section */}
         <div className="text-center mb-16 px-2">
           <span className="inline-block text-xs sm:text-sm font-medium tracking-widest text-[#FFD9D9] mb-4 px-4 py-2 rounded-full bg-[#2d2755]/50 border border-[#3a3465]">
-            Is This You?
+            Is This You ?
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
             Are You Facing These Challenges?
