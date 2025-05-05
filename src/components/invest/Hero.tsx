@@ -3,18 +3,23 @@ import blurimage from "../../assets/blurimage.svg";
 import investBanner from "../../assets/investBanner.svg";
 import EventCountdown from "./EventCountdown";
 const HeroSection: React.FC = () => {
+
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     mobile: "",
     captchaInput: "",
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const [submitStatus, setSubmitStatus] = useState<{
     success: boolean;
     message: string;
   } | null>(null);
+
   const [captchaText, setCaptchaText] = useState("");
 
   // Generate random CAPTCHA text
@@ -143,6 +148,8 @@ const HeroSection: React.FC = () => {
     setFormData({ name: "", email: "", mobile: "", captchaInput: "" });
     setSubmitStatus(null);
   };
+
+
   return (
     <>
       <div className="relative overflow-hidden min-h-[500px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] flex items-center justify-center">
@@ -163,6 +170,7 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Floating particles */}
+        
         {[...Array(15)].map((_, i) => (
           <div
             key={i}

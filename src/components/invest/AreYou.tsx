@@ -26,8 +26,8 @@ const AreYou: React.FC = () => {
         <div className="text-center mb-16 sm:mb-20 lg:mb-24">
           <div className="inline-block relative">
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              <span className="relative inline-block">
-                <span className="text-red-400 relative z-10">Markets Fall</span>
+              <span className="relative inline-block">Markets
+                <span className="text-red-400 relative z-10"> Fall</span>
                 {/* <span className="absolute bottom-0 left-0 h-2 w-full bg-red-400/30 rounded-full animate-pulse" /> */}
               </span>{" "}
               &{" "}

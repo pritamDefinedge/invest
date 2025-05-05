@@ -10,18 +10,6 @@ module.exports = {
       },
       colors: {
         primary: '#0d6efd',
-        diwali: {
-          orange: '#FF7722',
-          red: '#CD2129',
-          gold: '#FFD700',
-          maroon: '#800000',
-          purple: '#6D2E80',
-          yellow: {
-            light: '#FFF3CC',
-            DEFAULT: '#FFC226',
-            dark: '#E6AC00'
-          }
-        }
       },
       zIndex: {
         '999': 999,
