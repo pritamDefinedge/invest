@@ -206,11 +206,18 @@ const Introducing: React.FC = () => {
             className="text-center mb-12 sm:mb-16 lg:mb-20 px-2"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-              Invest in{" "}
+            Momentum   {" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
-                Momentum
+              Investing
               </span>{" "}
               in One Click
+            </h2>
+            <h2 className="text-3xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+              Remove Emotion.{" "}
+              <span className="text-yellow-400 font-semibold">
+                Automate
+              </span>{" "}
+              Discipline
             </h2>
             <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 opacity-90 leading-relaxed">
               From the creators of OPSTRA comes the momentum trading engine that

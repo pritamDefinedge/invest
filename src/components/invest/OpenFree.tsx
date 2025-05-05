@@ -103,9 +103,9 @@ const OpenFree: React.FC = () => {
             {/* Header */}
             <div className="text-center mb-10">
               <h2 className="text-4xl font-bold  text-white mb-3">
-                Join Free{" "}
+                Join The{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-300">
-                  Momentify
+                Free
                 </span>{" "}
                 Webinar
               </h2>
