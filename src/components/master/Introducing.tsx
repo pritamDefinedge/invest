@@ -6,7 +6,7 @@ const Introducing: React.FC = () => {
       title: "Build Your Momentum Trading Engine",
       description: [
         "How to Build a Custom Momentum Trading Engine",
-        "Tools to Identify Momentum in Stocks, Indices and Sectors using Objective Criteria",
+        "Platform to Identify Momentum in Stocks, Indices and Sectors using Objective Criteria",
         "Price + Relative Strength-Based Strategy Framework",
         "Price, Performance & Participation [3P] Analysis",
       ],

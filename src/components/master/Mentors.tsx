@@ -67,7 +67,7 @@ const Mentors: React.FC = () => {
             </p>
             <p className="text-gray-300 text-base sm:text-base md:text-base leading-relaxed">
               Prashant is also the mind behind the Noiseless Trading approach
-              and several practical tools used by modern traders. His mission is
+              and several practical platform used by modern traders. His mission is
               to empower traders with structured, independent thinking, helping
               them move away from noise-driven decisions toward a disciplined,
               rule-based approach.

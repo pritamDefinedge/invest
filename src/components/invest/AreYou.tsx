@@ -8,9 +8,9 @@ const AreYou: React.FC = () => {
   ];
 
   const rightPoints = [
-    "Ride momentum trends using smart, data-driven tools",
+    "Ride momentum trends using smart, data-driven platform",
     "Make objective investment decisions — free from emotions",
-    "Automate stock selection with powerful, easy-to-use tools",
+    "Automate stock selection with powerful, easy-to-use platform",
   ];
 
   return (
@@ -21,96 +21,119 @@ const AreYou: React.FC = () => {
         <div className="absolute bottom-1/4 right-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-blue-600/20 rounded-full blur-[100px] sm:blur-[120px] animate-[float_18s_ease-in-out_infinite]" />
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
-        {/* Header */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-            Markets <span className="text-red-400">Fall</span> &{" "}
-            <span className="text-green-400">Recover</span>
-            <br className="hidden sm:block" />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
-              Your Investment May Not!
-            </span>
-          </h2>
-          <p className="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg md:text-xl opacity-90 leading-relaxed mt-4 sm:mt-6">
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Animated header */}
+        <div className="text-center mb-16 sm:mb-20 lg:mb-24">
+          <div className="inline-block relative">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              <span className="relative inline-block">
+                <span className="text-red-400 relative z-10">Markets Fall</span>
+                {/* <span className="absolute bottom-0 left-0 h-2 w-full bg-red-400/30 rounded-full animate-pulse" /> */}
+              </span>{" "}
+              &{" "}
+              <span className="relative inline-block">
+                <span className="text-green-400 relative z-10">Recover</span>
+                {/* <span className="absolute bottom-0 left-0 h-2 w-full bg-green-400/30 rounded-full animate-pulse" /> */}
+              </span>
+              <br className="hidden sm:block" />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 inline-block mt-4">
+                Your Investment May Not!
+              </span>
+            </h2>
+            <div className="absolute -bottom-4 left-1/4 h-1 w-1/2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-width" />
+          </div>
+          <p className="max-w-3xl mx-auto text-gray-300 text-lg sm:text-xl md:text-2xl mt-8 leading-relaxed">
             The market has weathered many storms over the years and even as the
-            market recovers from each crash, most portfolios don’t.
+            market recovers from each crash, most portfolios don't.
           </p>
         </div>
 
-        {/* Unified Box */}
-        <div className="bg-[#1e1a3a]/70 backdrop-blur-lg p-6 sm:p-8 md:p-10 rounded-2xl border border-[#2d2755] hover:border-[#4a3f8a] transition-all duration-500 shadow-xl hover:shadow-2xl mb-12 sm:mb-16">
-          {/* Points Columns */}
-          <div className="flex flex-col lg:flex-row gap-8 sm:gap-10 lg:gap-12 mb-10 sm:mb-12">
-            {/* Left Column */}
-            <div className="lg:w-1/2">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6 sm:mb-8 text-center lg:text-left bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-blue-300">
-                But what if you could -
-              </h3>
-              <ul className="space-y-4 sm:space-y-6">
-                {leftPoints.map((point, index) => (
-                  <li key={index} className="flex items-start group">
-                    <div className="flex-shrink-0 mt-1 mr-3 sm:mr-4 text-green-400 group-hover:text-purple-300 transition-colors duration-300">
-                      <svg
-                        className="w-5 h-5 sm:w-6 sm:h-6"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-gray-200 text-base sm:text-base md:text-base group-hover:text-white transition-colors duration-300">
-                      {point}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        {/* Glass morphism card */}
+        <div className="bg-[#1e1a3a]/50 backdrop-blur-xl rounded-3xl border border-[#2d2755]/50 shadow-2xl overflow-hidden mb-16 transition-all duration-500 hover:border-[#4a3f8a]/70 hover:shadow-[0_20px_50px_rgba(93,71,255,0.15)]">
+          {/* Diagonal gradient accent */}
+          <div className="h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500" />
 
-            {/* Right Column */}
-            <div className="lg:w-1/2 lg:mt-8">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6 sm:mb-8 text-center lg:text-left bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-blue-300">
-                {""}
+          <div className="p-8 sm:p-10 md:p-12">
+            <div className="relative">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center lg:text-left">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-blue-300">
+                  But what if you could -
+                </span>
               </h3>
-              <ul className="space-y-4 sm:space-y-6">
-                {rightPoints.map((point, index) => (
-                  <li key={index} className="flex items-start group">
-                    <div className="flex-shrink-0 mt-1 mr-3 sm:mr-4 text-green-400 group-hover:text-blue-300 transition-colors duration-300">
-                      <svg
-                        className="w-5 h-5 sm:w-6 sm:h-6"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-gray-200 text-base sm:text-base md:text-base group-hover:text-white transition-colors duration-300">
-                      {point}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
 
-          {/* Conclusion Section */}
-          <div className="text-center sm:text-left">
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mx-auto leading-relaxed">
-              You can and all it takes is two things –{" "}
-              <span className="font-semibold text-white">
-                the right education
-              </span>{" "}
-              and{" "}
-              <span className="font-semibold text-white">the right platform </span>
-            </p>
+              {/* Interactive feature matrix */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                <div className="space-y-6">
+                  {leftPoints.map((point, index) => (
+                    <div key={index} className="flex items-start group">
+                      <div className="relative flex-shrink-0 mt-1 mr-4">
+                        <div className="absolute inset-0 bg-purple-500/20 rounded-full blur-md group-hover:bg-purple-500/30 transition-all duration-300" />
+                        <div className="relative w-6 h-6 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white">
+                          <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={3}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <span className="text-gray-200 text-lg group-hover:text-white transition-colors duration-300">
+                        {point}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <div className="space-y-6">
+                  {rightPoints.map((point, index) => (
+                    <div key={index} className="flex items-start group">
+                      <div className="relative flex-shrink-0 mt-1 mr-4">
+                        <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-md group-hover:bg-blue-500/30 transition-all duration-300" />
+                        <div className="relative w-6 h-6 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white">
+                          <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={3}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <span className="text-gray-200 text-lg group-hover:text-white transition-colors duration-300">
+                        {point}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Glowing conclusion */}
+              <div className="mt-12 pt-8 border-t border-[#2d2755]/50 relative">
+                <div className="absolute -top-px left-1/4 h-px w-1/2 bg-gradient-to-r from-transparent via-purple-500 to-transparent" />
+                <p className="text-xl sm:text-2xl text-center text-gray-300 leading-relaxed">
+                  You can and all it takes is two things –{" "}
+                  <span className="font-semibold text-white bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                    the right education
+                  </span>{" "}
+                  and{" "}
+                  <span className="font-semibold text-white bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                    the right platform
+                  </span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

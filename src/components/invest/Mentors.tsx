@@ -65,7 +65,7 @@ const Mentors: React.FC = () => {
             </p>
             {/* <p className="text-gray-300 text-base sm:text-base md:text-base leading-relaxed">
               He is a pioneer ins Noiseless trading and has helped create
-              various tools that help make trading objective. He is focused on
+              various platform that help make trading objective. He is focused on
               empowering traders through a disciplined, structured and
               rule-based trading approach, helping them move away from
               noise-ridden charts and emotional trading
