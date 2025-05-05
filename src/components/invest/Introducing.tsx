@@ -220,8 +220,7 @@ const Introducing: React.FC = () => {
               Discipline
             </h2>
             <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 opacity-90 leading-relaxed">
-              From the creators of OPSTRA comes the momentum trading engine that
-              lets you analyse, backtest and invest in a few clicks.
+            From the creators of Opstra, the acclaimed options analytics platform, comes another blockbuster product: Momentify! 
             </p>
           </motion.div>
 

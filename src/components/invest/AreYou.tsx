@@ -8,7 +8,7 @@ const AreYou: React.FC = () => {
   ];
 
   const rightPoints = [
-    "Ride momentum trends using smart, data-driven platform",
+    "Ride momentum trends using a smart, data-driven platform",
     "Make objective investment decisions — free from emotions",
     "Automate stock selection with powerful, easy-to-use platform",
   ];

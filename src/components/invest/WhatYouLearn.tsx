@@ -8,7 +8,7 @@ const WhatYouLearn: React.FC = () => {
     },
     {
       description:
-        "For transformative education, actionable analysis & seamless trading, explore 15+ Innovative platform  ",
+        "For transformative education, actionable analysis & seamless trading, explore 15+ Innovative platforms ",
     },
     {
       description:
@@ -45,27 +45,25 @@ const WhatYouLearn: React.FC = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Enhanced header section */}
         <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  viewport={{ once: true }}
-  className="text-center mb-14 px-4"
->
-  <h2 className="text-base sm:text-lg font-medium text-pink-300 tracking-widest uppercase mb-3">
-    Your Key to Momentify & More
-  </h2>
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-14 px-4"
+        >
+          <h2 className="text-base sm:text-lg font-medium text-pink-300 tracking-widest uppercase mb-3">
+            Your Key to Momentify & More
+          </h2>
 
-  <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
-    Your <span className="text-yellow-400"> Super Demat</span>
-  </h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
+            Your <span className="text-yellow-400"> Super Demat</span>
+          </h1>
 
-  <p className="text-sm sm:text-base md:text-lg font-medium text-[#FFD9D9] max-w-2xl mx-auto leading-relaxed">
-    From one-click momentum investing to expert-guided education,
-    everything begins with a Super Demat – the demat that you deserve
-  </p>
-</motion.div>
-
-
+          <p className="text-sm sm:text-base md:text-lg font-medium text-[#FFD9D9] max-w-2xl mx-auto leading-relaxed">
+            From one-click momentum investing to expert-guided education,
+            everything begins with a Super Demat – the demat that you deserve
+          </p>
+        </motion.div>
 
         {/* Enhanced points grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-2 sm:px-0">
