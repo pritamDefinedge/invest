@@ -21,7 +21,7 @@ const AreYou: React.FC = () => {
         <div className="absolute bottom-1/4 right-1/4 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-blue-600/20 rounded-full blur-[100px] sm:blur-[120px] animate-[float_18s_ease-in-out_infinite]" />
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Animated header */}
         <div className="text-center mb-16 sm:mb-20 lg:mb-24">
           <div className="inline-block relative">
