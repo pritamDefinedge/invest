@@ -28,33 +28,37 @@ const HeroSection: React.FC = () => {
           {/* Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 text-white">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-100 to-blue-100">
-            Master Momentum Trading 
+              Master Momentum Trading
             </span>
           </h1>
 
           {/* Subheading */}
           <h4 className="text-base sm:text-lg md:text-2xl font-semibold text-white mb-2">
-          Learn & Develop Strategies | Spot & Trade Outperformers | 1-click Execution 
+            Learn & Develop Strategies | Spot & Trade Outperformers | 1-click
+            Execution
           </h4>
 
           {/* Description */}
-          <p className="text-sm sm:text-base md:text-base text-gray-50 mb-6 mx-auto max-w-xl sm:max-w-2xl">
+          {/* <p className="text-sm sm:text-base md:text-base text-gray-50 mb-6 mx-auto max-w-xl sm:max-w-2xl">
             Learn & Develop a Momentum Trading Engine and Execute
             High-Probability Strategies with Clarity
-          </p>
+          </p> */}
 
           {/* CTA Button */}
-          <div className="flex justify-center">
+          <div className="flex my-8 justify-center">
             <a
               href="https://dashboard.definedge.com/buy-product/training"
               target="_blank"
-              className="relative overflow-hidden group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-3 px-6 sm:px-8 rounded-md transition-all duration-300 hover:shadow-md hover:shadow-purple-500/30"
-              rel="noopener noreferrer"
+              className="relative overflow-hidden group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-4 px-10 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-purple-500/30 transform hover:-translate-y-1"
             >
-              <span className="relative z-10 flex items-center justify-center">
-                Register Now
+              {/* Pulse effect */}
+              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400/30 to-blue-400/30 opacity-0 group-hover:opacity-100 group-hover:animate-pulse-once"></span>
+
+              {/* Main button content */}
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                <span className="font-semibold text-lg">Register Now</span>
                 <svg
-                  className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -68,7 +72,9 @@ const HeroSection: React.FC = () => {
                   />
                 </svg>
               </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md" />
+
+              {/* Hover state overlay */}
+              {/* <span className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></span> */}
             </a>
           </div>
           <EventCountdown />
