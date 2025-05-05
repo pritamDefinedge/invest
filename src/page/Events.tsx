@@ -2,7 +2,11 @@ import React, { useEffect, useState, useRef } from "react";
 import Header from "../components/master/Header";
 import Footer from "../components/master/Footer";
 import FooterBanner from "../components/master/FooterBanner";
+
 import Hero from "../components/master/Hero";
+import ModernHero from "../components/master/backupdesing/ModernHero";
+
+
 import AreYou from "../components/master/AreYou";
 import Introducing from "../components/master/Introducing";
 import WhatYouLearn from "../components/master/WhatYouLearn";
