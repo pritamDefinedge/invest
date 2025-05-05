@@ -212,7 +212,7 @@ const HeroSection: React.FC = () => {
               </span>{" "}
               in this step-by-step session. Learn practical techniques to build
               a smarter portfolio and take control of your investments —{" "}
-              <span className="italic">like your own fund manager</span>.
+              <span className="italic">be your own fund manager</span>.
             </p>
 
             <div className="flex flex-col items-center gap-6 w-full">

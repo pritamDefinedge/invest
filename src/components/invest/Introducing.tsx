@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 const Introducing: React.FC = () => {
   const learningPoints = [
     {
-      title: "Learn Momentum",
+      title: "Explore Momentum",
       description:
-        "Start with an expert-guided module that explore momentum investing from scratch to advanced investment strategies ",
+        "Start with an expert-guided module that explores momentum investing from basics to advanced investment strategies",
     },
     {
-      title: "Deploy Strategies",
+      title: "Create & Deploy Strategies ",
       description:
         "Choose from expert-created strategies or make your own based on funda-techno insights to best suit your goals ",
     },
     {
       title: "Backtest Your Way",
       description:
-        "Backtest your strategies over 2 decades to understand the performance and build confidence before you invest",
+        "Backtest your strategies over 20 years to understand performance and build confidence before you invest ",
     },
     {
       title: "Invest Objectively",
@@ -210,11 +210,11 @@ const Introducing: React.FC = () => {
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
                 Momentum
               </span>{" "}
-              in One Click 
+              in One Click
             </h2>
             <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 opacity-90 leading-relaxed">
               From the creators of OPSTRA comes the momentum trading engine that
-              lets you analyse, backtest and invest in a few clicks. 
+              lets you analyse, backtest and invest in a few clicks.
             </p>
           </motion.div>
 
