@@ -61,7 +61,7 @@ const TestimonialSlider = () => {
     //   rating: 5,
     //   image: "https://randomuser.me/api/portraits/women/63.jpg",
     // },
-    // {
+    // { 
     //   id: 7,
     //   name: "@VishalKumar-w6t9c",
     //   role: "Parent",
