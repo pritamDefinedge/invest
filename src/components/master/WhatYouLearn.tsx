@@ -251,7 +251,7 @@ const WhatYouLearn: React.FC = () => {
                 <span className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-purple-900/50 to-blue-900/50 border border-[#3d3670] text-yellow-400 p-3 group-hover:scale-110 transition-transform duration-300">
                   {point.icon}
                 </span>
-                <p className="text-gray-300 text-base leading-relaxed">
+                <p className="text-gray-300 text-sm sm:text-base md:text-base leading-relaxed">
                   {point.description}
                 </p>
               </div>

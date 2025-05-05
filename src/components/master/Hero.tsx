@@ -1,5 +1,5 @@
 import React from "react";
-// import Banner from "../../assets/hero.jpg";
+import Banner from "../../assets/hero.jpg";
 import EventCountdown from "./EventCountdown";
 const HeroSection: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
       <div
         className="absolute inset-0 w-full h-full"
         style={{
-          backgroundImage: `url("/hero.jpg"), linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(2 32 11) 50%, rgba(0, 0, 0, 0) 100%)`,
+          backgroundImage: `url(${Banner}),  linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(2 32 11) 50%, rgba(0, 0, 0, 0) 100%)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

@@ -197,8 +197,8 @@ const MasterMomentum: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center mb-4 md:mb-4">
-          <h2 className="text-2xl sm:text-3xl md:text-3xl font-semibold text-white mb-4 md:mb-0">
+        <div className="flex flex-row md:flex-row justify-between items-center mb-4 md:mb-4">
+          <h2 className="text-xl sm:text-3xl md:text-3xl font-semibold text-white mb-4 md:mb-0">
             Master Momentum Trading
           </h2>
           <div className="flex items-center space-x-4">
@@ -248,7 +248,7 @@ const MasterMomentum: React.FC = () => {
                   <h3 className="text-xl sm:text-2xl md:text-2xl font-bold text-white leading-snug">
                     Course Details
                   </h3>
-                  <div className="space-y-1 text-sm sm:text-base md:text-base text-gray-300 leading-relaxed">
+                  <div className="space-y-1 text-xs sm:text-sm md:text-base text-gray-300 leading-relaxed">
                     <p>📅 Sat 10th May 2025 - Sun 11th May 2025</p>
                     <p>🕙 10:00 AM – 5:00 PM</p>
                     <p>🎯 For PRO's and those with ambition of going PRO</p>

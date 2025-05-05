@@ -32,7 +32,7 @@ const Introducing: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-[#18152e] text-white overflow-hidden">
+    <section className="relative py-0 pb-12 sm:py-16 pt-12 px-4 sm:px-6 lg:px-8 bg-[#18152e] text-white overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute top-0 left-1/4 w-72 h-72 bg-purple-600 rounded-full filter blur-[100px] opacity-10 animate-float1 pointer-events-none" />
       <div className="absolute bottom-10 right-1/4 w-64 h-64 bg-blue-600 rounded-full filter blur-[90px] opacity-10 animate-float2 pointer-events-none" />

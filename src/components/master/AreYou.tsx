@@ -35,7 +35,7 @@ const AreYou: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#18152e] text-white overflow-hidden">
+    <section className="relative  pt-20 py-0 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#18152e] text-white overflow-hidden">
       {/* Top blur effect */}
       <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-[#0f0c29] via-[#18152e]/90 to-transparent backdrop-blur-lg z-10 pointer-events-none"></div>
 
