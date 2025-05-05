@@ -28,13 +28,13 @@ const HeroSection: React.FC = () => {
           {/* Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 text-white">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-100 to-blue-100">
-              Master Momentum Trading
+            Master Momentum Trading 
             </span>
           </h1>
 
           {/* Subheading */}
           <h4 className="text-base sm:text-lg md:text-2xl font-semibold text-white mb-2">
-            Build Confidence | Trade Logically | Grow Consistently
+          Learn & Develop Strategies | Spot & Trade Outperformers | 1-click Execution 
           </h4>
 
           {/* Description */}

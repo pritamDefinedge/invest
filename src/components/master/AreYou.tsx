@@ -52,9 +52,9 @@ const AreYou: React.FC = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
             Are You Facing These Challenges?
           </h2>
-          <p className="max-w-2xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg opacity-90">
+          {/* <p className="max-w-2xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg opacity-90">
             Common struggles that traders face  and exactly how we help solve them
-          </p>
+          </p> */}
         </div>
 
         {/* Points grid */}
@@ -87,7 +87,7 @@ const AreYou: React.FC = () => {
         {/* CTA section */}
         <div className="mt-16 text-center px-2">
           <div className="max-w-3xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg opacity-90 mb-8">
-            <p>If you answered <span> "Yes"</span>  to any of the above, Master Momentum Trading is for you</p>
+            <p>If you answered <span> "Yes"</span>  to any of the above, <span className="font-bold"> Master Momentum Trading</span> is for you</p>
           </div>
         </div>
       </div>

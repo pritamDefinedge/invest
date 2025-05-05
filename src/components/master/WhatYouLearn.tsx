@@ -50,11 +50,19 @@ const WhatYouLearn: React.FC = () => {
         {/* Header section */}
         <div className="text-center mb-12 px-4">
           <h2 className="text-sm sm:text-base md:text-lg font-semibold text-[#FFD9D9] mb-2 tracking-widest">
-            What You Will Learn
+          What Will You Learn? 
           </h2>
           <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-100 leading-snug">
-            Your Evolution as a Power Trader
+          Your Evolution as a Power Trader 
           </h3>
+
+          <h2 className="text-3xl my-2 sm:text-2xl md:text-2xl lg:text-2xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+              Remove Emotion.{" "}
+              <span className="text-yellow-400 font-semibold">
+                Automate
+              </span>{" "}
+              Discipline
+            </h2>
         </div>
 
         {/* Points grid */}

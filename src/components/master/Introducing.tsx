@@ -51,9 +51,13 @@ const Introducing: React.FC = () => {
             </span>
           </h2>
           <p className="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 opacity-90 leading-relaxed">
+            Ride <span className="font-medium text-white">Momentum.</span> Trade
+            Outperformers
+          </p>
+          {/* <p className="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 opacity-90 leading-relaxed">
             Learn to construct a powerful{" "}
             <span className="font-medium text-white">Momentum Trading Engine</span> and apply it in real markets with precision and discipline.
-          </p>
+          </p> */}
         </div>
 
         {/* Features grid */}
