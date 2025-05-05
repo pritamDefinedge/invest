@@ -42,7 +42,29 @@ const OpenFree: React.FC = () => {
               </h2>
               <p className="text-blue-100 mb-4 md:mb-6 text-sm sm:text-base md:text-lg">
                 For Definedge Super Demat Account Holders 20% Off (Apply Code :
-                <span className="text-yellow-300"> MYDSEC20 </span>)
+                <span className="inline-flex items-center gap-1 text-yellow-300 ml-1">
+                  MYDSEC20
+                  <button
+                    type="button"
+                    onClick={() => navigator.clipboard.writeText("MYDSEC20")}
+                    className="hover:text-yellow-200 transition"
+                    title="Copy Code"
+                  >
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2M16 8h2a2 2 0 012 2v8a2 2 0 01-2 2h-8a2 2 0 01-2-2v-2"
+                      />
+                    </svg>
+                  </button>
+                </span>
               </p>
             </div>
           </div>

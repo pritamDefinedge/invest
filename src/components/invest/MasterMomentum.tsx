@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MomentumImg from "../../assets/master_momentum.svg";
+import MomentumImg from "../../assets/master_moment_invest.png";
 
 const MasterMomentum: React.FC = () => {
   const [showSharePopup, setShowSharePopup] = useState(false);
@@ -234,7 +234,7 @@ const MasterMomentum: React.FC = () => {
               <img
                 src={MomentumImg}
                 alt="Master Momentum Trading Course"
-                className="w-full h-full object-cover transition duration-500 hover:scale-105"
+                className="w-full h-full  transition duration-500 hover:scale-105"
               />
             </div>
 

@@ -38,6 +38,7 @@ const Mentors: React.FC = () => {
               className=" mr-2 inline-flex items-center text-gray-50 hover:underline"
             >
               <svg
+                className="mr-2"
                 width="20"
                 height="19"
                 viewBox="0 0 20 19"
@@ -67,10 +68,10 @@ const Mentors: React.FC = () => {
             </p>
             <p className="text-gray-300 text-base sm:text-base md:text-base leading-relaxed">
               Prashant is also the mind behind the Noiseless Trading approach
-              and several practical platform used by modern traders. His mission is
-              to empower traders with structured, independent thinking, helping
-              them move away from noise-driven decisions toward a disciplined,
-              rule-based approach.
+              and several practical platform used by modern traders. His mission
+              is to empower traders with structured, independent thinking,
+              helping them move away from noise-driven decisions toward a
+              disciplined, rule-based approach.
             </p>
           </div>
         </div>
@@ -100,6 +101,7 @@ const Mentors: React.FC = () => {
               className=" mr-2 inline-flex items-center text-gray-50 hover:underline"
             >
               <svg
+                className="mr-2"
                 width="20"
                 height="19"
                 viewBox="0 0 20 19"

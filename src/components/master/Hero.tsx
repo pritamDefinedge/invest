@@ -1,6 +1,6 @@
 import React from "react";
 // import Banner from "../../assets/hero.jpg";
-
+import EventCountdown from "./EventCountdown";
 const HeroSection: React.FC = () => {
   return (
     <div className="relative overflow-hidden min-h-[500px] sm:min-h-[550px] md:min-h-[650px] lg:min-h-[750px] flex items-center justify-center">
@@ -71,6 +71,7 @@ const HeroSection: React.FC = () => {
               <span className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md" />
             </a>
           </div>
+          <EventCountdown />
         </div>
       </div>
     </div>
