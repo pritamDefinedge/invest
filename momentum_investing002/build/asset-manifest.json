@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.9969ac0c.css",
-    "main.js": "./static/js/main.daf0bd54.js",
+    "main.js": "./static/js/main.aaeac6df.js",
     "static/js/453.caaa068e.chunk.js": "./static/js/453.caaa068e.chunk.js",
     "static/media/fa-solid-900.ttf": "./static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
     "static/media/master_moment_invest.png": "./static/media/master_moment_invest.f29fc509bf093e3cb7f4.png",
@@ -13,15 +13,15 @@
     "static/media/investBanner.svg": "./static/media/investBanner.0ad35c484201c28a6993a71924b699d1.svg",
     "static/media/fa-regular-400.woff2": "./static/media/fa-regular-400.89999bdf5d835c012025.woff2",
     "static/media/fa-v4compatibility.ttf": "./static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "index.html": "./index.html",
     "static/media/definedge_logo_light.svg": "./static/media/definedge_logo_light.219737052420a8597ab74ee245d6901b.svg",
     "static/media/fa-v4compatibility.woff2": "./static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
-    "index.html": "./index.html",
     "main.9969ac0c.css.map": "./static/css/main.9969ac0c.css.map",
-    "main.daf0bd54.js.map": "./static/js/main.daf0bd54.js.map",
+    "main.aaeac6df.js.map": "./static/js/main.aaeac6df.js.map",
     "453.caaa068e.chunk.js.map": "./static/js/453.caaa068e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9969ac0c.css",
-    "static/js/main.daf0bd54.js"
+    "static/js/main.aaeac6df.js"
   ]
 }
