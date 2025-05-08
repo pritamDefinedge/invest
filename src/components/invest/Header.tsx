@@ -4,7 +4,8 @@ import Logo from "../../assets/definedge_logo_light.svg";
 const Header: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     mobile: "",
     captchaInput: "",
@@ -69,8 +70,18 @@ const Header: React.FC = () => {
       return;
     }
 
-    if (!formData.name.trim()) {
-      setSubmitStatus({ success: false, message: "Please enter your name" });
+    if (!formData.firstName.trim()) {
+      setSubmitStatus({
+        success: false,
+        message: "Please enter your first name",
+      });
+      return;
+    }
+    if (!formData.lastName.trim()) {
+      setSubmitStatus({
+        success: false,
+        message: "Please enter your last name",
+      });
       return;
     }
 
@@ -102,7 +113,8 @@ const Header: React.FC = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            name: formData.name,
+            firstName: formData.firstName,
+            lastName: formData.lastName,
             email: formData.email,
             phone: formData.mobile,
             additional_data: "Momentum Investing",
@@ -117,7 +129,13 @@ const Header: React.FC = () => {
           success: true,
           message: "Thank you for registering!",
         });
-        setFormData({ name: "", email: "", mobile: "", captchaInput: "" });
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          mobile: "",
+          captchaInput: "",
+        });
         setTimeout(() => setIsModalOpen(false), 3000);
       } else {
         setSubmitStatus({
@@ -139,7 +157,13 @@ const Header: React.FC = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setFormData({ name: "", email: "", mobile: "", captchaInput: "" });
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      mobile: "",
+      captchaInput: "",
+    });
     setSubmitStatus(null);
   };
 
@@ -220,15 +244,29 @@ const Header: React.FC = () => {
                       <div className="space-y-4">
                         <div>
                           <label className="block text-white/80 mb-2 text-sm font-medium">
-                            Your Name
+                            First Name
                           </label>
                           <input
                             type="text"
-                            name="name"
-                            placeholder="Enter your name"
+                            name="firstName"
+                            placeholder="Enter  your first name"
                             className="w-full p-3 bg-white/5 text-white placeholder-white/50 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition duration-200"
                             required
-                            value={formData.name}
+                            value={formData.firstName}
+                            onChange={handleInputChange}
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-white/80 mb-2 text-sm font-medium">
+                            Last Name
+                          </label>
+                          <input
+                            type="text"
+                            name="lastName"
+                            placeholder="Enter your last name"
+                            className="w-full p-3 bg-white/5 text-white placeholder-white/50 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition duration-200"
+                            required
+                            value={formData.lastName}
                             onChange={handleInputChange}
                           />
                         </div>

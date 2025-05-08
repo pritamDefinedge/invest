@@ -3,11 +3,11 @@ import blurimage from "../../assets/blurimage.svg";
 import investBanner from "../../assets/investBanner.svg";
 import EventCountdown from "./EventCountdown";
 const HeroSection: React.FC = () => {
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     mobile: "",
     captchaInput: "",
@@ -75,8 +75,19 @@ const HeroSection: React.FC = () => {
       return;
     }
 
-    if (!formData.name.trim()) {
-      setSubmitStatus({ success: false, message: "Please enter your name" });
+    if (!formData.firstName.trim()) {
+      setSubmitStatus({
+        success: false,
+        message: "Please enter your First name",
+      });
+      return;
+    }
+
+    if (!formData.lastName.trim()) {
+      setSubmitStatus({
+        success: false,
+        message: "Please enter your Last name",
+      });
       return;
     }
 
@@ -108,7 +119,8 @@ const HeroSection: React.FC = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            name: formData.name,
+            firstName: formData.firstName,
+            lastName: formData.lastName,
             email: formData.email,
             phone: formData.mobile,
             additional_data: "Momentum Investing",
@@ -123,7 +135,13 @@ const HeroSection: React.FC = () => {
           success: true,
           message: "Thank you for registering!",
         });
-        setFormData({ name: "", email: "", mobile: "", captchaInput: "" });
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          mobile: "",
+          captchaInput: "",
+        });
         setTimeout(() => setIsModalOpen(false), 3000);
       } else {
         setSubmitStatus({
@@ -145,10 +163,15 @@ const HeroSection: React.FC = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setFormData({ name: "", email: "", mobile: "", captchaInput: "" });
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      mobile: "",
+      captchaInput: "",
+    });
     setSubmitStatus(null);
   };
-
 
   return (
     <>
@@ -170,7 +193,7 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Floating particles */}
-        
+
         {[...Array(15)].map((_, i) => (
           <div
             key={i}
@@ -216,8 +239,6 @@ const HeroSection: React.FC = () => {
             </p>
 
             <div className="flex flex-col items-center gap-6 w-full">
-            
-
               {/* Enhanced Register Button with pulse effect */}
               <button
                 onClick={() => setIsModalOpen(true)}
@@ -316,15 +337,29 @@ const HeroSection: React.FC = () => {
                       <div className="space-y-4">
                         <div>
                           <label className="block text-white/80 mb-2 text-sm font-medium">
-                            Your Name
+                            First Name
                           </label>
                           <input
                             type="text"
-                            name="name"
-                            placeholder="Enter your name"
+                            name="firstName"
+                            placeholder="Enter  your first name"
                             className="w-full p-3 bg-white/5 text-white placeholder-white/50 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition duration-200"
                             required
-                            value={formData.name}
+                            value={formData.firstName}
+                            onChange={handleInputChange}
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-white/80 mb-2 text-sm font-medium">
+                            Last Name
+                          </label>
+                          <input
+                            type="text"
+                            name="lastName"
+                            placeholder="Enter your last name"
+                            className="w-full p-3 bg-white/5 text-white placeholder-white/50 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition duration-200"
+                            required
+                            value={formData.lastName}
                             onChange={handleInputChange}
                           />
                         </div>

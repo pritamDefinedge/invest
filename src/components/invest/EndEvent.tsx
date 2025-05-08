@@ -78,7 +78,7 @@ const EndEvent: React.FC = () => {
 
         {/* Title with Neon Glow */}
         <motion.h2
-          className="text-5xl md:text-7xl font-bold tracking-tight mb-8"
+          className="text-4xl md:text-4xl font-bold tracking-tight mb-8"
           animate={{ 
             backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
             textShadow: [
@@ -100,7 +100,7 @@ const EndEvent: React.FC = () => {
             color: "transparent",
           }}
         >
-          Thank You!
+          Registrations Are Now Closed
         </motion.h2>
 
         {/* Subtitle */}
@@ -110,9 +110,10 @@ const EndEvent: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          Master Momentum Trading session was recently conducted.
-          Stay connected for upcoming events and new learning opportunities
+        Thank you for your interest in the Momentum Investing Webinar by Prashant Shah.
+        This session is now fully booked.
         </motion.p>
+        
 
         {/* Action Buttons */}
         <div className="flex flex-wrap justify-center gap-6">

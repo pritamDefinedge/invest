@@ -257,7 +257,7 @@ const MasterMomentum: React.FC = () => {
                     Course Details
                   </h3>
                   <div className="space-y-1 text-sm sm:text-base md:text-base text-gray-300 leading-relaxed">
-                    <p>📅 Wed, 7th May 2025</p>
+                    <p>📅 Wed, 21st May 2025</p>
                     <p>🕙 07:00 PM – 09:00 PM</p>
                     {/* <p>🎯 For All Trader</p> */}
                     <p>🌐 Online </p>

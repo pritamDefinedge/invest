@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 
 const OpenFree: React.FC = () => {
   const [mobile, setMobile] = useState("");
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [captchaText, setCaptchaText] = useState("");
   const [userCaptcha, setUserCaptcha] = useState("");
@@ -52,11 +53,12 @@ const OpenFree: React.FC = () => {
     }
 
     try {
-      const response = await fetch("YOUR_API_ENDPOINT", {
+      const response = await fetch("https://www.definedge.com/wp-json/custom-api/v1/add-data/?api_key=VmhWIhhXlrubNwvA6czBJR4fPCBU5sch", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: name,
+          firstName: firstName,
+          lastName: lastName,
           email: email,
           phone: mobile,
           additional_data: "Momentum Investing",
@@ -65,7 +67,8 @@ const OpenFree: React.FC = () => {
 
       if (response.ok) {
         alert("Thank you for registering!");
-        setName("");
+        setFirstName("");
+        setLastName("");
         setEmail("");
         setMobile("");
         generateCaptcha();
@@ -117,14 +120,30 @@ const OpenFree: React.FC = () => {
                 {/* Name */}
                 <div className="space-y-2">
                   <label className="block text-sm font-medium text-blue-100/80">
-                    Your Name
+                    First Name
                   </label>
                   <div className="relative">
                     <input
                       type="text"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      placeholder="Enter your name"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      placeholder="Enter your first name"
+                      className="w-full px-4 py-3 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg text-white placeholder-blue-200/30 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-transparent transition-all duration-200"
+                      required
+                    />
+                    <div className="absolute inset-0 rounded-lg border border-blue-400/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <label className="block text-sm font-medium text-blue-100/80">
+                    Last Name
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      placeholder="Enter your last name"
                       className="w-full px-4 py-3 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg text-white placeholder-blue-200/30 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-transparent transition-all duration-200"
                       required
                     />
