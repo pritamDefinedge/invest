@@ -20,7 +20,7 @@ const EndEvent: React.FC = () => {
             ease: "easeInOut",
           }}
         />
-        
+
         {/* Pink Orb */}
         <motion.div
           className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-[#ff007f]/20 rounded-full blur-[150px]"
@@ -35,7 +35,7 @@ const EndEvent: React.FC = () => {
             ease: "easeInOut",
           }}
         />
-        
+
         {/* Small Floating Particles */}
         {[...Array(12)].map((_, i) => (
           <motion.div
@@ -78,40 +78,46 @@ const EndEvent: React.FC = () => {
 
         {/* Title with Neon Glow */}
         <motion.h2
-          className="text-5xl md:text-7xl font-bold tracking-tight mb-8"
-          animate={{ 
+          className="text-2xl md:text-3xl font-bold tracking-tight mb-8"
+          animate={{
             backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
             textShadow: [
               "0 0 10px rgba(0,234,255,0.3)",
               "0 0 20px rgba(0,234,255,0.5), 0 0 30px rgba(255,0,127,0.5)",
-              "0 0 10px rgba(0,234,255,0.3)"
-            ]
+              "0 0 10px rgba(0,234,255,0.3)",
+            ],
           }}
-          transition={{ 
-            duration: 8, 
-            repeat: Infinity, 
-            ease: "linear" 
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "linear",
           }}
           style={{
-            backgroundImage: "linear-gradient(90deg, #00eaff, #ff007f, #00eaff)",
+            backgroundImage:
+              "linear-gradient(90deg, #00eaff, #ff007f, #00eaff)",
             backgroundSize: "300% 100%",
             WebkitBackgroundClip: "text",
             backgroundClip: "text",
             color: "transparent",
           }}
         >
-          Thank You!
+          Registrations Are Now Closed
         </motion.h2>
 
         {/* Subtitle */}
-        <motion.p 
+        <motion.p
           className="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          Master Momentum Trading session was recently conducted.
-          Stay connected for upcoming events and new learning opportunities
+          Thank you for your interest in{" "}
+          <span className="font-bold "> Master Momentum Trading. <br /></span> <br />
+          <span className="font-bold ">
+            {" "}
+            Want to attend the next session? <br />
+          </span>
+          Stay connected for updates on upcoming events.
         </motion.p>
 
         {/* Action Buttons */}
@@ -126,15 +132,23 @@ const EndEvent: React.FC = () => {
             <span className="absolute inset-0 bg-gradient-to-r from-[#00eaff] to-[#ff007f] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             <span className="relative z-10 flex items-center justify-center gap-3">
               View Upcoming Events
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
               </svg>
             </span>
           </motion.a>
-
-         
         </div>
-
       </motion.div>
     </section>
   );

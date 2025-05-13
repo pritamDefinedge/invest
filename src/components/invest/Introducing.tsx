@@ -527,10 +527,6 @@ const Introducing: React.FC = () => {
                     </form>
                   )}
 
-                  <p className="text-white/60 text-sm text-center mt-6">
-                    Join On – We will send the Webinar Link to all registered
-                    participants on the registered email ID by 6th May 2025.
-                  </p>
                 </div>
               </div>
             </div>

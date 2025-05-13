@@ -1,93 +1,178 @@
 import React, { useState, useEffect } from "react";
 
 const OpenFree: React.FC = () => {
-  const [mobile, setMobile] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [captchaText, setCaptchaText] = useState("");
-  const [userCaptcha, setUserCaptcha] = useState("");
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    mobile: "",
+    captchaInput: "",
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    success: boolean;
+    message: string;
+  } | null>(null);
+  const [captchaText, setCaptchaText] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
-  // Generate CAPTCHA
+  // Generate random CAPTCHA text
   const generateCaptcha = () => {
-    const chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789";
+    const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let result = "";
     for (let i = 0; i < 6; i++) {
       result += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     setCaptchaText(result);
-    setUserCaptcha("");
   };
 
-  useEffect(() => generateCaptcha(), []);
+  useEffect(() => {
+    generateCaptcha();
+  }, []);
 
-  const isValidIndianMobile = (number: string): boolean =>
-    /^[6-9]\d{9}$/.test(number);
-  const isValidEmail = (email: string): boolean =>
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  useEffect(() => {
+    if (submitStatus) {
+      setShowPopup(true);
+      const timer = setTimeout(() => {
+        setShowPopup(false);
+        // Clear the status after hiding the popup if it was successful
+        if (submitStatus.success) {
+          setSubmitStatus(null);
+        }
+      }, 5000); // Hide after 5 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [submitStatus]);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const isValidIndianMobile = (number: string): boolean => {
+    return /^[6-9]\d{9}$/.test(number);
+  };
+
+  const isValidEmail = (email: string): boolean => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+
+    if (name === "mobile") {
+      const digitsOnly = value.replace(/[^0-9]/g, "");
+      if (digitsOnly.length <= 10) {
+        setFormData((prev) => ({ ...prev, [name]: digitsOnly }));
+      }
+      return;
+    }
+
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitStatus(null);
+
+    if (formData.captchaInput !== captchaText) {
+      setSubmitStatus({
+        success: false,
+        message: "CAPTCHA verification failed. Please try again.",
+      });
+      generateCaptcha();
+      return;
+    }
+
+    if (!formData.firstName.trim()) {
+      setSubmitStatus({
+        success: false,
+        message: "Please enter your first name",
+      });
+      return;
+    }
+    if (!formData.lastName.trim()) {
+      setSubmitStatus({
+        success: false,
+        message: "Please enter your last name",
+      });
+      return;
+    }
+
+    if (!isValidEmail(formData.email)) {
+      setSubmitStatus({
+        success: false,
+        message: "Please enter a valid email address",
+      });
+      return;
+    }
+
+    if (!isValidIndianMobile(formData.mobile)) {
+      setSubmitStatus({
+        success: false,
+        message:
+          "Please enter a valid 10-digit Indian mobile number (starting with 6-9)",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
-    if (!isValidIndianMobile(mobile)) {
-      alert(
-        "Please enter a valid 10-digit Indian mobile number (starting with 6-9)."
-      );
-      setIsSubmitting(false);
-      return;
-    }
-
-    if (!isValidEmail(email)) {
-      alert("Please enter a valid email address.");
-      setIsSubmitting(false);
-      return;
-    }
-
-    if (userCaptcha !== captchaText) {
-      alert("CAPTCHA verification failed. Please try again.");
-      generateCaptcha();
-      setIsSubmitting(false);
-      return;
-    }
-
     try {
-      const response = await fetch("https://www.definedge.com/wp-json/custom-api/v1/add-data/?api_key=VmhWIhhXlrubNwvA6czBJR4fPCBU5sch", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          firstName: firstName,
-          lastName: lastName,
-          email: email,
-          phone: mobile,
-          additional_data: "Momentum Investing",
-        }),
-      });
+      const response = await fetch(
+        "https://www.definedge.com/wp-json/custom-api/v1/add-data/?api_key=VmhWIhhXlrubNwvA6czBJR4fPCBU5sch",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            phone: formData.mobile,
+            additional_data: "Momentum Investing",
+          }),
+        }
+      );
+
+      const responseData = await response.json();
 
       if (response.ok) {
-        alert("Thank you for registering!");
-        setFirstName("");
-        setLastName("");
-        setEmail("");
-        setMobile("");
-        generateCaptcha();
+        setSubmitStatus({
+          success: true,
+          message: "Thank you for registering!",
+        });
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          mobile: "",
+          captchaInput: "",
+        });
       } else {
-        const responseData = await response.json();
-        alert(responseData.message || "Failed to register. Please try again.");
+        setSubmitStatus({
+          success: false,
+          message:
+            responseData.message || "Registration failed. Please try again.",
+        });
       }
     } catch (error) {
-      console.error("Error:", error);
-      alert("Network error. Please try again later.");
+      console.error("API Error:", error);
+      setSubmitStatus({
+        success: false,
+        message: "Network error. Please try again later.",
+      });
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  const closePopup = () => {
+    setShowPopup(false);
+    if (submitStatus?.success) {
+      setSubmitStatus(null);
+    }
+  };
+
   return (
-    // <section className="relative py-20 px-4 sm:px-6 bg-[#0a0b1a] overflow-hidden">
     <section
-      className="relative bg-[#18152e] text-white py-12 md:py-24"
+      className="relative bg-[#18152e] text-white py-8 md:py-8"
       id="formId"
     >
       {/* Animated gradient background */}
@@ -95,6 +180,72 @@ const OpenFree: React.FC = () => {
         <div className="absolute top-0 left-0 w-[40%] h-[40%] bg-[radial-gradient(circle_at_center,_rgba(99,102,241,0.2)_0%,_transparent_70%)] animate-[pulse_12s_ease-in-out_infinite]" />
         <div className="absolute bottom-0 right-0 w-[50%] h-[50%] bg-[radial-gradient(circle_at_center,_rgba(236,72,153,0.15)_0%,_transparent_70%)] animate-[pulse_15s_ease-in-out_infinite]" />
       </div>
+
+      {/* Popup Modal */}
+      {showPopup && submitStatus && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50 backdrop-blur-sm">
+          <div className="relative bg-[#18152e] border border-[rgba(255,255,255,0.2)] rounded-xl shadow-2xl max-w-md w-full p-6">
+            <button
+              onClick={closePopup}
+              className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
+              aria-label="Close"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+            
+            <div className="text-center py-4">
+              <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
+                {submitStatus.success ? (
+                  <svg
+                    className="h-6 w-6 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    className="h-6 w-6 text-red-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                )}
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">
+                {submitStatus.success ? "Success!" : "Error"}
+              </h3>
+              <p className="text-white/90">{submitStatus.message}</p>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="relative max-w-5xl mx-auto z-10 px-4">
         {/* Glass morphism card */}
@@ -105,10 +256,10 @@ const OpenFree: React.FC = () => {
           <div className="p-8 md:p-10">
             {/* Header */}
             <div className="text-center mb-10">
-              <h2 className="text-4xl font-bold  text-white mb-3">
+              <h2 className="text-4xl font-bold text-white mb-3">
                 Join The{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-300">
-                Free
+                  Free
                 </span>{" "}
                 Webinar
               </h2>
@@ -125,13 +276,13 @@ const OpenFree: React.FC = () => {
                   <div className="relative">
                     <input
                       type="text"
-                      value={firstName}
-                      onChange={(e) => setFirstName(e.target.value)}
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
                       placeholder="Enter your first name"
                       className="w-full px-4 py-3 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg text-white placeholder-blue-200/30 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-transparent transition-all duration-200"
                       required
                     />
-                    <div className="absolute inset-0 rounded-lg border border-blue-400/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </div>
                 <div className="space-y-2">
@@ -141,13 +292,13 @@ const OpenFree: React.FC = () => {
                   <div className="relative">
                     <input
                       type="text"
-                      value={lastName}
-                      onChange={(e) => setLastName(e.target.value)}
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
                       placeholder="Enter your last name"
                       className="w-full px-4 py-3 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg text-white placeholder-blue-200/30 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-transparent transition-all duration-200"
                       required
                     />
-                    <div className="absolute inset-0 rounded-lg border border-blue-400/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </div>
 
@@ -159,13 +310,13 @@ const OpenFree: React.FC = () => {
                   <div className="relative">
                     <input
                       type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       placeholder="Enter your email"
                       className="w-full px-4 py-3 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg text-white placeholder-blue-200/30 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-transparent transition-all duration-200"
                       required
                     />
-                    <div className="absolute inset-0 rounded-lg border border-blue-400/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </div>
 
@@ -174,19 +325,14 @@ const OpenFree: React.FC = () => {
                   <label className="block text-sm font-medium text-blue-100/80">
                     Mobile Number
                   </label>
-                  <div className="flex relative">
-                    <div className="flex items-center px-3 bg-[rgba(99,102,241,0.2)] border border-[rgba(255,255,255,0.1)] rounded-l-lg text-white">
-                      +91
-                    </div>
+                  <div className="relative">
                     <input
-                      type="tel"
-                      value={mobile}
-                      onChange={(e) =>
-                        setMobile(e.target.value.replace(/[^0-9]/g, ""))
-                      }
-                      placeholder="Enter mobile number"
-                      maxLength={10}
-                      className="flex-grow w-full px-4 py-3 bg-[rgba(255,255,255,0.05)] border-t border-b border-r border-[rgba(255,255,255,0.1)] rounded-r-lg text-white placeholder-blue-200/30 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-transparent transition-all duration-200"
+                      type="text"
+                      name="mobile"
+                      value={formData.mobile}
+                      onChange={handleInputChange}
+                      placeholder="Enter your mobile number"
+                      className="w-full px-4 py-3 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg text-white placeholder-blue-200/30 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-transparent transition-all duration-200"
                       required
                     />
                   </div>
@@ -243,8 +389,9 @@ const OpenFree: React.FC = () => {
                     </div>
                     <input
                       type="text"
-                      value={userCaptcha}
-                      onChange={(e) => setUserCaptcha(e.target.value)}
+                      name="captchaInput"
+                      value={formData.captchaInput}
+                      onChange={handleInputChange}
                       placeholder="Enter text"
                       className="w-full sm:w-3/5 px-4 py-3 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg text-white placeholder-blue-200/30 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-transparent transition-all duration-200 text-base sm:text-sm"
                       required
@@ -254,65 +401,16 @@ const OpenFree: React.FC = () => {
               </div>
 
               {/* Submit Button */}
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className={`w-full py-4 px-6 rounded-lg font-medium text-white transition-all duration-300 ${
-                  isSubmitting
-                    ? "bg-[rgba(99,102,241,0.6)] cursor-not-allowed"
-                    : "bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 shadow-lg hover:shadow-indigo-500/30"
-                }`}
-              >
-                {isSubmitting ? (
-                  <span className="flex items-center justify-center gap-2">
-                    <svg
-                      className="animate-spin h-5 w-5 text-white"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      ></circle>
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                      ></path>
-                    </svg>
-                    Processing...
-                  </span>
-                ) : (
-                  <span className="flex items-center justify-center gap-2">
-                    Register Now
-                    <svg
-                      className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      ></path>
-                    </svg>
-                  </span>
-                )}
-              </button>
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-blue-400 to-purple-400 hover:from-blue-500 hover:to-purple-500 text-white px-6 py-3 rounded-lg font-medium text-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent transition-all duration-200"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Submitting..." : "Register"}
+                </button>
+              </div>
             </form>
-
-            {/* Footer note */}
-            <p className="text-center text-blue-200/60 text-sm mt-8">
-              Join On – We will send the Webinar Link to all registered
-              participants on the registered email ID by 6th May 2025.
-            </p>
           </div>
         </div>
       </div>

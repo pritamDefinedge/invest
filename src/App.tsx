@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-// import Events from "./page/Events";
+import Events from "./page/Events";
 import InvestMomentum from "./page/InvestMomentum";
 
 function App() {
