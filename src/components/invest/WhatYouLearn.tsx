@@ -56,12 +56,12 @@ const WhatYouLearn: React.FC = () => {
           </h2>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
-            Your <span className="text-yellow-400"> Super Demat</span>
+            Your <span className="text-yellow-400"> Definedge Demat</span>
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg font-medium text-[#FFD9D9] max-w-2xl mx-auto leading-relaxed">
             From one-click momentum investing to expert-guided education,
-            everything begins with a Super Demat – the demat that you deserve
+            everything begins with a Definedge Demat – the demat that you deserve
           </p>
         </motion.div>
 
@@ -122,7 +122,7 @@ const WhatYouLearn: React.FC = () => {
             className="relative overflow-hidden group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/30 text-sm sm:text-base"
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
-              Get Your Super Demat
+              Get Your  Demat
               <svg
                 className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform"
                 fill="none"

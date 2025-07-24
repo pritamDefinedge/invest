@@ -40,7 +40,7 @@ const FooterBanner: React.FC = () => {
                 target="_blank"
                 className="hover:text-white transition-colors duration-300"
               >
-                Tradepoint
+                TradePoint
               </a>
             </li>
             <li>
@@ -49,7 +49,7 @@ const FooterBanner: React.FC = () => {
                 target="_blank"
                 className="hover:text-white transition-colors duration-300"
               >
-                Opstra
+                OPSTRA
               </a>
             </li>
             <li>
@@ -58,7 +58,7 @@ const FooterBanner: React.FC = () => {
                 target="_blank"
                 className="hover:text-white transition-colors duration-300"
               >
-                Tradepoint Web
+                TradePoint Web
               </a>
             </li>
             <li>
@@ -67,18 +67,10 @@ const FooterBanner: React.FC = () => {
                 target="_blank"
                 className="hover:text-white transition-colors duration-300"
               >
-                Traders Nest
+                Trader's Nest 
               </a>
             </li>
-            <li>
-              <a
-                href="https://www.definedge.com/market-pathshala/"
-                target="_blank"
-                className="hover:text-white transition-colors duration-300"
-              >
-                Market Pathshala
-              </a>
-            </li>
+        
             <li>
               <a
                 href="https://insight.definedge.com/"

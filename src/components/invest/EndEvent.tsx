@@ -100,7 +100,7 @@ const EndEvent: React.FC = () => {
             color: "transparent",
           }}
         >
-          Registrations Are Now Closed
+      Registration Are Now Full 
         </motion.h2>
 
         {/* Subtitle */}
@@ -110,8 +110,7 @@ const EndEvent: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-        Thank you for your interest in the Momentum Investing Webinar by Prashant Shah.
-        This session is now fully booked.
+        Thank you for your interest in the Momentum Investing. This session is now fully booked.
         </motion.p>
         
 

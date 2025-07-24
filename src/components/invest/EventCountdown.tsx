@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const CountdownTimer = () => {
-  const eventDate = new Date('May 21, 2025 19:00:00').getTime();
+  const eventDate = new Date('July 9, 2025 19:00:00').getTime();
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -42,7 +42,7 @@ const CountdownTimer = () => {
   );
 
   return (
-    <section className="w-full px-4 py-8 md:py-12 flex justify-center items-center ">
+    <section className="w-full px-4 py-2  flex justify-center items-center ">
       <div className="w-full max-w-2xl">
        
 

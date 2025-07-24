@@ -37,9 +37,8 @@ const HeroSection: React.FC = () => {
               height: `${Math.random() * 10 + 5}px`,
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
-              animation: `float ${
-                Math.random() * 15 + 10
-              }s ease-in-out infinite`,
+              animation: `float ${Math.random() * 15 + 10
+                }s ease-in-out infinite`,
               animationDelay: `${Math.random() * 5}s`,
             }}
           />
@@ -62,7 +61,7 @@ const HeroSection: React.FC = () => {
               </span>
             </h1>
 
-            <p className="text-md sm:text-lg md:text-xl text-gray-100 mb-8 mx-auto max-w-xl sm:max-w-2xl leading-relaxed">
+            <p className="text-md sm:text-lg md:text-xl text-gray-100 mb-8 mx-auto px-5  max-w-xl sm:max-w-2xl leading-relaxed">
               Discover the power of{" "}
               <span className="font-semibold text-blue-300">
                 Momentum Investing
@@ -103,6 +102,9 @@ const HeroSection: React.FC = () => {
                 {/* Hover state overlay */}
                 {/* <span className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></span> */}
               </button>
+              <p className="text-white text-sm sm:text-base  font-light tracking-wide px-4 py-2 rounded-xl shadow-lg shadow-indigo-500/40 inline-block">
+                9<sup>th</sup> Jul 2025 &nbsp; | &nbsp; 7 PM – 9 PM
+              </p>
 
               <EventCountdown />
             </div>

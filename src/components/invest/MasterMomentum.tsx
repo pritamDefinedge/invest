@@ -140,7 +140,7 @@ const MasterMomentum: React.FC = () => {
                 className="flex flex-col items-center p-3 rounded-lg bg-[#2d2755] hover:bg-[#3a3465] transition-colors"
               >
                 <div className="w-12 h-12  rounded-full flex items-center justify-center mb-2">
-                <svg
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 50 50"
                     width="50px"
@@ -190,22 +190,23 @@ const MasterMomentum: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section with Title and Description */}
         <div className="flex flex-col items-center text-center mb-12 px-4">
-  <h2 className="text-base sm:text-lg font-medium text-blue-300 uppercase tracking-widest mb-3">
-    Join Exclusive Webinar
-  </h2>
+          <h2 className="text-base sm:text-lg font-medium text-blue-300 uppercase tracking-widest mb-3">
+            Join Exclusive Webinar
+          </h2>
 
-  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
-    Start with <span className="text-yellow-400">FREE</span> Learning
-  </h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
+            Start with <span className="text-yellow-400">FREE</span> Learning
+          </h1>
 
-  <p className="text-gray-300 max-w-3xl mx-auto text-base sm:text-lg mb-2">
-    Before you explore and invest with Momentify, start with our exclusive webinar.
-  </p>
-  <p className="text-gray-300 max-w-3xl mx-auto text-base sm:text-lg">
-    Understand momentum, how your portfolio can grow with momentum investing and how you can invest with Momentify.
-  </p>
-</div>
-
+          <p className="text-gray-300 max-w-3xl mx-auto text-base sm:text-lg mb-2">
+            Before you explore and invest with Momentify, start with our
+            exclusive webinar.
+          </p>
+          <p className="text-gray-300 max-w-3xl mx-auto text-base sm:text-lg">
+            Understand momentum, how your portfolio can grow with momentum
+            investing and how you can invest with Momentify.
+          </p>
+        </div>
 
         {/* Share Button */}
         <div className="flex flex-col md:flex-row justify-end items-end mb-4">
@@ -257,11 +258,12 @@ const MasterMomentum: React.FC = () => {
                     Course Details
                   </h3>
                   <div className="space-y-1 text-sm sm:text-base md:text-base text-gray-300 leading-relaxed">
-                    <p>📅 Wed, 21st May 2025</p>
-                    <p>🕙 07:00 PM – 09:00 PM</p>
+                    <p>📅 Wed, 9<sup>th</sup> Jul 2025</p>
+                    <p>🕖 7:00 PM – 9:00 PM</p>
+
                     {/* <p>🎯 For All Trader</p> */}
                     <p>🌐 Online </p>
-                    <p>🗣️ English & Hindi</p>
+                    <p>🗣️ Hindi</p>
                   </div>
                 </div>
 
